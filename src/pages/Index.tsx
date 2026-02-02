@@ -5,7 +5,6 @@ import { ModulesGrid } from "@/components/landing/ModulesGrid";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { FAQ } from "@/components/landing/FAQ";
-import { CTAForm } from "@/components/landing/CTAForm";
 import { Footer } from "@/components/landing/Footer";
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <HowItWorks />
       <TrustStrip />
       <FAQ />
-      <CTAForm />
       <Footer />
     </div>
   );
