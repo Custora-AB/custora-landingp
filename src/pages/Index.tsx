@@ -5,6 +5,7 @@ import { ModulesGrid } from "@/components/landing/ModulesGrid";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { FAQ } from "@/components/landing/FAQ";
+import { WaitlistNewsletter } from "@/components/landing/WaitlistNewsletter";
 import { Footer } from "@/components/landing/Footer";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <HowItWorks />
       <TrustStrip />
       <FAQ />
+      <WaitlistNewsletter />
       <Footer />
     </div>
   );
