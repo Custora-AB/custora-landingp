@@ -42,8 +42,8 @@ export function Hero() {
             delay: 0.2,
             ease: [0.21, 0.47, 0.32, 0.98]
           }} className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
-                Request a demo
+              <Button variant="hero" size="xl" asChild>
+                <a href="#waitlist">Join waitlist</a>
               </Button>
             </motion.div>
 
