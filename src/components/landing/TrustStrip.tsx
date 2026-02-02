@@ -1,4 +1,5 @@
 import { Shield, FileText, Lock } from "lucide-react";
+import { StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const trustItems = [
   {
@@ -22,9 +23,9 @@ export function TrustStrip() {
   return (
     <section className="py-12 lg:py-16 bg-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {trustItems.map((item, index) => (
-            <div
+        <StaggerContainer className="grid md:grid-cols-3 gap-8 lg:gap-12" staggerDelay={0.1}>
+          {trustItems.map((item) => (
+            <StaggerItem
               key={item.title}
               className="flex items-center gap-4 text-center md:text-left justify-center md:justify-start"
             >
@@ -35,9 +36,9 @@ export function TrustStrip() {
                 <h4 className="font-semibold text-primary-foreground">{item.title}</h4>
                 <p className="text-sm text-primary-foreground/70">{item.description}</p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

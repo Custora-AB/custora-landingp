@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const items = [
   {
@@ -19,18 +20,18 @@ export function ProblemSolution() {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-foreground mb-4">
             From fragmented records to connected infrastructure
           </h2>
           <p className="text-lg text-muted-foreground">
             Private company ownership shouldn't be managed in silos. Custora replaces manual processes with a unified platform.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <StaggerContainer className="grid md:grid-cols-3 gap-8 lg:gap-12" staggerDelay={0.15}>
           {items.map((item, index) => (
-            <div key={index} className="space-y-6">
+            <StaggerItem key={index} className="space-y-6">
               {/* Problem */}
               <div className="card-glass p-6 border-l-2 border-destructive/30">
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide mb-2">
@@ -57,9 +58,9 @@ export function ProblemSolution() {
                   {item.solution}
                 </p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
