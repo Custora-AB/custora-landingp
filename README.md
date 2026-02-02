@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Custora Landing Page
 
 ## Project info
 
