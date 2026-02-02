@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
 import productMockup from "@/assets/product-mockup.png";
 import { motion } from "framer-motion";
 export function Hero() {
@@ -45,10 +44,6 @@ export function Hero() {
           }} className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl">
                 Request a demo
-              </Button>
-              <Button variant="heroSecondary" size="xl">
-                <Play className="w-5 h-5 mr-2" />
-                Watch a video tour
               </Button>
             </motion.div>
 
