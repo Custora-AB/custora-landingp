@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const tiers = [
   {
@@ -52,24 +53,23 @@ export function Pricing() {
   return (
     <section className="section bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6">Simple, transparent pricing</h2>
           <p className="text-lg text-muted-foreground">
             Choose the plan that fits your needs. All plans include core ownership management 
             features with no hidden fees.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {tiers.map((tier, index) => (
-            <div
+        <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto" staggerDelay={0.12}>
+          {tiers.map((tier) => (
+            <StaggerItem
               key={tier.name}
-              className={`relative rounded-2xl p-6 lg:p-8 animate-slide-up ${
+              className={`relative rounded-2xl p-6 lg:p-8 ${
                 tier.highlighted
                   ? "bg-primary text-primary-foreground shadow-xl scale-105 lg:scale-110"
                   : "card-elevated"
               }`}
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               {tier.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
@@ -103,9 +103,9 @@ export function Pricing() {
               >
                 {tier.cta}
               </Button>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

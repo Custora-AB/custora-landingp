@@ -6,6 +6,7 @@ import {
   Eye,
   UserCheck,
 } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const modules = [
   {
@@ -50,21 +51,17 @@ export function ModulesGrid() {
   return (
     <section className="section bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6">Everything you need to manage private ownership</h2>
           <p className="text-lg text-muted-foreground">
             Purpose-built modules that work together seamlessly. Start with what you need, 
             expand as you grow.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {modules.map((module, index) => (
-            <div
-              key={module.title}
-              className="card-elevated p-6 lg:p-8 space-y-4 animate-slide-up"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.08}>
+          {modules.map((module) => (
+            <StaggerItem key={module.title} className="card-elevated p-6 lg:p-8 space-y-4">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-teal-light flex items-center justify-center">
                   <module.icon className="w-6 h-6 text-accent" />
@@ -85,9 +82,9 @@ export function ModulesGrid() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
