@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/landing/Navigation";
 import { Hero } from "@/components/landing/Hero";
 import { ProblemSolution } from "@/components/landing/ProblemSolution";
-import { ValueProp } from "@/components/landing/ValueProp";
 import { ModulesGrid } from "@/components/landing/ModulesGrid";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { TrustStrip } from "@/components/landing/TrustStrip";
@@ -15,7 +14,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       <ProblemSolution />
-      <ValueProp />
       <ModulesGrid />
       <HowItWorks />
       <TrustStrip />
