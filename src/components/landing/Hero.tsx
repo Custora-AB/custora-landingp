@@ -16,12 +16,11 @@ export function Hero() {
           {/* Left: Content */}
           <div className="space-y-8 animate-slide-up">
             <div className="space-y-4">
-              <h1 className="text-foreground">
-                Infrastructure for ownership management in private European companies
+            <h1 className="text-foreground">
+                Infrastructure for ownership management in European companies
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                A unified platform for share registers, governance, and compliance. 
-                Trusted by private equity, family offices, and growth companies across Europe.
+                A single source of truth for share registers, compliance, and stakeholder collaboration across your portfolio.
               </p>
             </div>
 
