@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/landing/Navigation";
 import { Hero } from "@/components/landing/Hero";
+import { ProblemSolution } from "@/components/landing/ProblemSolution";
 import { ValueProp } from "@/components/landing/ValueProp";
 import { ModulesGrid } from "@/components/landing/ModulesGrid";
 import { HowItWorks } from "@/components/landing/HowItWorks";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <ProblemSolution />
       <ValueProp />
       <ModulesGrid />
       <HowItWorks />
