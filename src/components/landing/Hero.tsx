@@ -24,8 +24,8 @@ export function Hero() {
           ease: [0.21, 0.47, 0.32, 0.98]
         }} className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-foreground">
-                Infrastructure for ownership management in European companies
+            <h1 className="text-foreground">
+                Infrastructure for ownership management in private European companies
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 A single source of truth for share registers, compliance, and stakeholder collaboration across your portfolio.
