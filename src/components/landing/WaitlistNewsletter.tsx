@@ -37,12 +37,12 @@ export function WaitlistNewsletter() {
   };
 
   return (
-    <section className="section bg-muted/30" id="waitlist">
+    <section className="section bg-primary" id="waitlist">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto">
           <ScrollReveal className="text-center mb-8">
-            <h2 className="text-foreground mb-3">Waitlist & Newsletter</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-primary-foreground mb-3">Waitlist & Newsletter</h2>
+            <p className="text-primary-foreground/80">
               Get early access and stay informed about product updates.
             </p>
           </ScrollReveal>
