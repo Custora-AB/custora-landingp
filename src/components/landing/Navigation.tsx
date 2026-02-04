@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,9 +27,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-lg">C</span>
-            </div>
+            <img src={logo} alt="Custora" className="w-8 h-8 rounded-lg" />
             <span className="text-xl font-bold text-foreground">Custora</span>
           </a>
 
