@@ -18,8 +18,8 @@ const Index = () => {
           backgroundPosition: "top left",
           backgroundRepeat: "no-repeat",
           backgroundSize: "70%",
-          maskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1) 50%, transparent 70%)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1) 50%, transparent 70%)",
+          maskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.2) 50%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.2) 50%, transparent 70%)",
         }}
       />
       <Navigation onWaitlistClick={() => setWaitlistOpen(true)} />
