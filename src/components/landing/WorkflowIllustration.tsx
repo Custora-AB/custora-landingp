@@ -27,8 +27,11 @@ function getNodeCenter(node: (typeof nodes)[0]) {
 
 export function WorkflowIllustration({ animate }: { animate: boolean }) {
   const [glowingNodes, setGlowingNodes] = useState<Set<number>>(new Set());
+  const [visibleNodes, setVisibleNodes] = useState<Set<number>>(new Set([0])); // source node starts visible
 
   const triggerGlow = useCallback((nodeId: number) => {
+    // Make node visible (pop up) and glow
+    setVisibleNodes((prev) => new Set(prev).add(nodeId));
     setGlowingNodes((prev) => new Set(prev).add(nodeId));
     setTimeout(() => {
       setGlowingNodes((prev) => {
@@ -168,10 +171,11 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
       {/* Node cards */}
       {nodes.map((node, i) => {
         const isGlowing = glowingNodes.has(node.id);
+        const isVisible = visibleNodes.has(node.id);
         return (
           <motion.div
             key={node.id}
-            className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary transition-all duration-300"
+            className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary"
             style={{
               left: `${(node.x / 360) * 100}%`,
               top: `${(node.y / 260) * 100}%`,
@@ -180,11 +184,14 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
                 ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)"
                 : "0 1px 4px 0 rgba(5, 28, 44, 0.15)",
             }}
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={animate ? { opacity: 1, scale: 1 } : {}}
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={
+              isVisible && animate
+                ? { opacity: 1, scale: isGlowing ? 1.08 : 1 }
+                : { opacity: 0, scale: 0.6 }
+            }
             transition={{
-              duration: 0.45,
-              delay: 0.2 + i * 0.12,
+              duration: 0.4,
               ease: [0.21, 0.47, 0.32, 0.98],
             }}
           >
