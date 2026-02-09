@@ -3,7 +3,7 @@ import { FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-r
 import { useState, useEffect, useCallback } from "react";
 
 const nodes = [
-  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 0 },
+  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 10 },
   { id: 1, label: "Reporting", icon: ClipboardCheck, x: 240, y: 100 },
   { id: 2, label: "Data Room", icon: FolderLock, x: 120, y: 200 },
   { id: 3, label: "KYC", icon: UserCheck, x: 0, y: 100 },
@@ -60,12 +60,7 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
 
   return (
     <div className="w-full aspect-square max-w-[420px] mx-auto relative">
-      <svg
-        viewBox="-10 -10 380 280"
-        fill="none"
-        className="w-full h-full"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="-10 -10 380 280" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           {/* Line glow filter */}
           <filter id="line-glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -185,11 +180,7 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
                 : "0 1px 4px 0 rgba(5, 28, 44, 0.15)",
             }}
             initial={{ opacity: 0, scale: 0.6 }}
-            animate={
-              isVisible && animate
-                ? { opacity: 1, scale: isGlowing ? 1.08 : 1 }
-                : { opacity: 0, scale: 0.6 }
-            }
+            animate={isVisible && animate ? { opacity: 1, scale: isGlowing ? 1.08 : 1 } : { opacity: 0, scale: 0.6 }}
             transition={{
               duration: 0.4,
               ease: [0.21, 0.47, 0.32, 0.98],
@@ -210,9 +201,7 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
                 }}
               />
             </div>
-            <span className="text-xs font-medium text-primary-foreground whitespace-nowrap">
-              {node.label}
-            </span>
+            <span className="text-xs font-medium text-primary-foreground whitespace-nowrap">{node.label}</span>
           </motion.div>
         );
       })}
