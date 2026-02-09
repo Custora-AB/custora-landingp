@@ -29,16 +29,17 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                 />
               </h1>
 
-              <p className="text-base lg:text-lg text-muted-foreground max-w-lg mb-5 min-h-[1.4em]">
-                {headlineDone && (
-                  <TypewriterText
-                    text="A single source of truth for share registers, compliance, and stakeholder collaboration."
-                    speed={18}
-                    delay={100}
-                    onComplete={() => setSubDone(true)}
-                  />
-                )}
-              </p>
+              <motion.p
+                className="text-base lg:text-lg text-muted-foreground max-w-lg mb-5"
+                initial={{ opacity: 0, y: 12 }}
+                animate={headlineDone ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                onAnimationComplete={() => {
+                  if (headlineDone) setSubDone(true);
+                }}
+              >
+                A single source of truth for share registers, compliance, and stakeholder collaboration.
+              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0 }}
