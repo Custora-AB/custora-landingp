@@ -171,15 +171,14 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
         return (
           <motion.div
             key={node.id}
-            className="absolute flex items-center gap-2.5 rounded-lg px-4 py-2.5 transition-all duration-300"
+            className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary transition-all duration-300"
             style={{
               left: `${(node.x / 360) * 100}%`,
               top: `${(node.y / 260) * 100}%`,
-              backgroundColor: "hsl(var(--background))",
-              border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsl(var(--border))"}`,
+              border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsla(var(--primary-foreground) / 0.15)"}`,
               boxShadow: isGlowing
                 ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)"
-                : "0 1px 2px 0 rgba(5, 28, 44, 0.04)",
+                : "0 1px 4px 0 rgba(5, 28, 44, 0.15)",
             }}
             initial={{ opacity: 0, scale: 0.85 }}
             animate={animate ? { opacity: 1, scale: 1 } : {}}
@@ -190,22 +189,21 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
             }}
           >
             <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300"
+              className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300"
               style={{
                 backgroundColor: isGlowing
-                  ? "hsla(var(--accent) / 0.2)"
-                  : "hsla(var(--accent) / 0.1)",
+                  ? "hsla(var(--primary-foreground) / 0.25)"
+                  : "hsla(var(--primary-foreground) / 0.15)",
               }}
             >
               <node.icon
-                className="w-4 h-4 transition-colors duration-300"
+                className="w-4 h-4 text-primary-foreground transition-colors duration-300"
                 style={{
-                  color: "hsl(var(--accent))",
                   filter: isGlowing ? "brightness(1.3)" : "none",
                 }}
               />
             </div>
-            <span className="text-xs font-medium text-foreground whitespace-nowrap">
+            <span className="text-xs font-medium text-primary-foreground whitespace-nowrap">
               {node.label}
             </span>
           </motion.div>
