@@ -108,7 +108,7 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full mt-2 text-white shadow-lg bg-gradient-to-r from-[hsl(220,70%,20%)] via-[hsl(225,75%,25%)] to-[hsl(230,80%,30%)] hover:from-[hsl(220,70%,17%)] hover:via-[hsl(225,75%,22%)] hover:to-[hsl(230,80%,27%)]"
+                    className="w-full mt-2 text-white shadow-lg bg-gradient-to-r from-[hsl(225,90%,45%)] via-[hsl(230,95%,50%)] to-[hsl(220,85%,42%)] hover:from-[hsl(225,90%,40%)] hover:via-[hsl(230,95%,45%)] hover:to-[hsl(220,85%,37%)]"
                   >
                     Request pilot access
                   </Button>
