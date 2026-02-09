@@ -175,10 +175,10 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
         return (
           <motion.div
             key={node.id}
-            className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary"
+            className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary -translate-x-1/2 -translate-y-1/2"
             style={{
-              left: `${(node.x / 360) * 100}%`,
-              top: `${(node.y / 260) * 100}%`,
+              left: `${((node.x + 65 + 10) / 380) * 100}%`,
+              top: `${((node.y + 22 + 10) / 280) * 100}%`,
               border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsla(var(--primary-foreground) / 0.15)"}`,
               boxShadow: isGlowing
                 ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)"
