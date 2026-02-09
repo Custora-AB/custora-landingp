@@ -1,10 +1,8 @@
 import {
   FileSpreadsheet,
-  ArrowRightLeft,
-  Users,
   ClipboardCheck,
-  Eye,
   UserCheck,
+  FolderLock,
 } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
@@ -12,32 +10,26 @@ const modules = [
   {
     icon: FileSpreadsheet,
     title: "Share register & cap table",
-    description: "Single source of truth for ownership across entities.",
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Corporate actions",
-    description: "Issuances, transfers, and splits — fully auditable.",
-  },
-  {
-    icon: Users,
-    title: "Governance workflows",
-    description: "Board decisions, minutes, and document logs.",
+    description:
+      "Multi-entity ownership structure with support for ordinary shares, preference shares, and options. Automatic cap table with full dilution view.",
   },
   {
     icon: ClipboardCheck,
-    title: "Compliance-ready exports",
-    description: "Audit trails and jurisdiction-specific reporting.",
-  },
-  {
-    icon: Eye,
-    title: "Investor portal",
-    description: "Controlled access for stakeholders and investors.",
+    title: "Regulatory reporting",
+    description:
+      "Structured forms for financial authority reporting — AIF data, ownership structures, and managed capital. Draft versioning and export-ready.",
   },
   {
     icon: UserCheck,
     title: "KYC collection",
-    description: "Structured intake and manual review workflows.",
+    description:
+      "Structured investor verification: identity, ownership structure, PEP/AML declarations, and document uploads with manual approval workflow.",
+  },
+  {
+    icon: FolderLock,
+    title: "Investor data room",
+    description:
+      "Controlled document library per company. Role-based access, version history, and download-only sharing for reports, agreements, and presentations.",
   },
 ];
 
@@ -46,15 +38,15 @@ export function ModulesGrid() {
     <section className="py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="max-w-2xl mx-auto text-center mb-14">
-          <h2 className="mb-4">The solution</h2>
+          <h2 className="mb-4">Core modules</h2>
           <p className="text-muted-foreground">
-            Custora is a system of record for ownership and governance. Purpose-built modules that work together.
+            Four purpose-built modules that cover the full ownership lifecycle — from register to compliance.
           </p>
         </ScrollReveal>
 
         <StaggerContainer
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-          staggerDelay={0.06}
+          className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          staggerDelay={0.08}
         >
           {modules.map((module) => (
             <StaggerItem
