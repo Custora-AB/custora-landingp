@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 
 const nodes = [
   { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 15 },
@@ -16,11 +17,52 @@ const connections: [number, number][] = [
   [0, 3],
 ];
 
+const DOT_DURATION = 2.5; // seconds
+const DOT_START_DELAY = 2; // seconds after animate=true
+const DOT_STAGGER = 0.5; // seconds between each dot
+const CYCLE = DOT_DURATION + 4; // duration + repeatDelay
+
 function getNodeCenter(node: (typeof nodes)[0]) {
   return { cx: node.x + 65, cy: node.y + 22 };
 }
 
 export function WorkflowIllustration({ animate }: { animate: boolean }) {
+  const [glowingNodes, setGlowingNodes] = useState<Set<number>>(new Set());
+
+  const triggerGlow = useCallback((nodeId: number) => {
+    setGlowingNodes((prev) => new Set(prev).add(nodeId));
+    setTimeout(() => {
+      setGlowingNodes((prev) => {
+        const next = new Set(prev);
+        next.delete(nodeId);
+        return next;
+      });
+    }, 600);
+  }, []);
+
+  useEffect(() => {
+    if (!animate) return;
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    const startCycle = () => {
+      connections.forEach((conn, i) => {
+        // Dot arrives at target node at DOT_START_DELAY + i*DOT_STAGGER + DOT_DURATION
+        const arrivalTime = (DOT_START_DELAY + i * DOT_STAGGER + DOT_DURATION) * 1000;
+        const targetNode = conn[1];
+        timers.push(setTimeout(() => triggerGlow(targetNode), arrivalTime));
+      });
+    };
+
+    startCycle();
+    const interval = setInterval(startCycle, CYCLE * 1000);
+
+    return () => {
+      timers.forEach(clearTimeout);
+      clearInterval(interval);
+    };
+  }, [animate, triggerGlow]);
+
   return (
     <div className="w-full aspect-square max-w-[420px] mx-auto relative">
       <svg
@@ -29,13 +71,21 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Center hub glow */}
         <defs>
           <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.15" />
             <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0" />
           </radialGradient>
+          {/* Node glow filter */}
+          <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
         </defs>
+
         <motion.circle
           cx="180"
           cy="130"
@@ -45,10 +95,10 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
           animate={animate ? { opacity: [0, 1, 0.5, 1] } : {}}
           transition={{ duration: 3, delay: 1.5, repeat: Infinity, ease: "easeInOut" }}
         />
+
         {connections.map((conn, i) => {
           const from = getNodeCenter(nodes[conn[0]]);
           const to = getNodeCenter(nodes[conn[1]]);
-          // Curved path
           const dx = to.cx - from.cx;
           const dy = to.cy - from.cy;
           const cx1 = from.cx + dx * 0.5 + (i % 2 === 0 ? 15 : -15);
@@ -90,8 +140,8 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
                   : {}
               }
               transition={{
-                duration: 2.5,
-                delay: 2 + i * 0.5,
+                duration: DOT_DURATION,
+                delay: DOT_START_DELAY + i * DOT_STAGGER,
                 ease: "easeInOut",
                 repeat: Infinity,
                 repeatDelay: 4,
@@ -102,30 +152,51 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
       </svg>
 
       {/* Node cards */}
-      {nodes.map((node, i) => (
-        <motion.div
-          key={node.id}
-          className="absolute flex items-center gap-2.5 bg-background border border-border rounded-lg px-4 py-2.5 shadow-sm"
-          style={{
-            left: `${(node.x / 360) * 100}%`,
-            top: `${(node.y / 260) * 100}%`,
-          }}
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={animate ? { opacity: 1, scale: 1 } : {}}
-          transition={{
-            duration: 0.45,
-            delay: 0.2 + i * 0.12,
-            ease: [0.21, 0.47, 0.32, 0.98],
-          }}
-        >
-          <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
-            <node.icon className="w-4 h-4 text-accent" />
-          </div>
-          <span className="text-xs font-medium text-foreground whitespace-nowrap">
-            {node.label}
-          </span>
-        </motion.div>
-      ))}
+      {nodes.map((node, i) => {
+        const isGlowing = glowingNodes.has(node.id);
+        return (
+          <motion.div
+            key={node.id}
+            className="absolute flex items-center gap-2.5 rounded-lg px-4 py-2.5 transition-all duration-300"
+            style={{
+              left: `${(node.x / 360) * 100}%`,
+              top: `${(node.y / 260) * 100}%`,
+              backgroundColor: "hsl(var(--background))",
+              border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsl(var(--border))"}`,
+              boxShadow: isGlowing
+                ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)"
+                : "0 1px 2px 0 rgba(5, 28, 44, 0.04)",
+            }}
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={animate ? { opacity: 1, scale: 1 } : {}}
+            transition={{
+              duration: 0.45,
+              delay: 0.2 + i * 0.12,
+              ease: [0.21, 0.47, 0.32, 0.98],
+            }}
+          >
+            <div
+              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-300"
+              style={{
+                backgroundColor: isGlowing
+                  ? "hsla(var(--accent) / 0.2)"
+                  : "hsla(var(--accent) / 0.1)",
+              }}
+            >
+              <node.icon
+                className="w-4 h-4 transition-colors duration-300"
+                style={{
+                  color: "hsl(var(--accent))",
+                  filter: isGlowing ? "brightness(1.3)" : "none",
+                }}
+              />
+            </div>
+            <span className="text-xs font-medium text-foreground whitespace-nowrap">
+              {node.label}
+            </span>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
