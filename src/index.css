@@ -2,124 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custora Enterprise Design System
-   Inspired by Carta's minimal, confident aesthetic
-   Deep navy + teal accents, lots of whitespace, strong typography
+/* Custora Design System
+   McKinsey-inspired: deep blue, pure white, electric blue accent, editorial clarity
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Core brand colors - Deep navy enterprise palette */
-    --background: 210 20% 99%;
-    --foreground: 222 47% 11%;
+    /* McKinsey-inspired palette */
+    --background: 0 0% 100%;
+    --foreground: 207 64% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 207 64% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 207 64% 10%;
 
-    /* Primary - Deep navy */
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - McKinsey deep blue #051C2C */
+    --primary: 207 72% 10%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Soft gray-blue */
-    --secondary: 214 32% 96%;
-    --secondary-foreground: 222 47% 11%;
+    /* Secondary */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 207 64% 10%;
 
-    /* Muted - Subtle grays */
-    --muted: 214 20% 95%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted */
+    --muted: 210 14% 95%;
+    --muted-foreground: 210 10% 46%;
 
-    /* Accent - Sophisticated teal */
-    --accent: 173 58% 39%;
+    /* Accent - McKinsey electric blue */
+    --accent: 210 100% 45%;
     --accent-foreground: 0 0% 100%;
 
-    /* Enterprise teal palette */
-    --teal: 173 58% 39%;
-    --teal-light: 173 50% 95%;
-    --teal-dark: 173 58% 30%;
+    /* Extended palette */
+    --teal: 210 100% 45%;
+    --teal-light: 210 60% 95%;
+    --teal-dark: 210 100% 35%;
 
-    /* Navy palette for gradients */
-    --navy: 222 47% 11%;
-    --navy-light: 222 35% 20%;
-    --navy-muted: 222 25% 35%;
+    --navy: 207 72% 10%;
+    --navy-light: 207 50% 18%;
+    --navy-muted: 207 30% 35%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Borders & inputs */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 173 58% 39%;
+    --border: 210 18% 90%;
+    --input: 210 18% 90%;
+    --ring: 210 100% 45%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
     /* Sidebar tokens */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5% 26%;
-    --sidebar-primary: 222 47% 11%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5% 96%;
-    --sidebar-accent-foreground: 240 6% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 173 58% 39%;
+    --sidebar-background: 207 72% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 50% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 207 50% 18%;
+    --sidebar-ring: 210 100% 45%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(222 35% 20%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(214 20% 98%) 100%);
-    --gradient-teal: linear-gradient(135deg, hsl(173 58% 39%) 0%, hsl(173 58% 30%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 99%) 0%, hsl(214 20% 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(207 72% 10%) 0%, hsl(207 50% 18%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 14% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 97%) 100%);
 
-    /* Shadows - Soft enterprise shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
-    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.04);
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(5, 28, 44, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(5, 28, 44, 0.06), 0 2px 4px -2px rgba(5, 28, 44, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(5, 28, 44, 0.08), 0 4px 6px -4px rgba(5, 28, 44, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(5, 28, 44, 0.08), 0 8px 10px -6px rgba(5, 28, 44, 0.04);
+    --shadow-card: 0 1px 3px rgba(5, 28, 44, 0.05), 0 4px 12px rgba(5, 28, 44, 0.04);
+    --shadow-card-hover: 0 4px 12px rgba(5, 28, 44, 0.08), 0 8px 24px rgba(5, 28, 44, 0.06);
   }
 
   .dark {
-    --background: 222 47% 6%;
+    --background: 207 64% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 8%;
+    --card: 207 64% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 8%;
+    --popover: 207 64% 8%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
+    --primary-foreground: 207 72% 10%;
 
-    --secondary: 217 33% 17%;
+    --secondary: 207 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 207 33% 17%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 173 58% 45%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 207 72% 10%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 173 58% 45%;
+    --border: 207 33% 17%;
+    --input: 207 33% 17%;
+    --ring: 210 100% 50%;
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 240 5% 96%;
-    --sidebar-primary: 173 58% 45%;
+    --sidebar-background: 207 64% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4% 16%;
-    --sidebar-accent-foreground: 240 5% 96%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 173 58% 45%;
+    --sidebar-accent: 207 40% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 207 40% 16%;
+    --sidebar-ring: 210 100% 50%;
   }
 }
 
@@ -137,15 +134,17 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  /* Typography scale */
+  /* Typography scale — editorial, McKinsey-inspired */
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground;
-    line-height: 1.1;
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.08;
   }
 
   h2 {
     @apply text-3xl md:text-4xl font-bold tracking-tight text-foreground;
-    line-height: 1.2;
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.15;
   }
 
   h3 {
@@ -163,9 +162,8 @@
 }
 
 @layer components {
-  /* Card variants */
   .card-elevated {
-    @apply bg-card rounded-xl border border-border;
+    @apply bg-card rounded-lg border border-border;
     box-shadow: var(--shadow-card);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
@@ -176,11 +174,10 @@
   }
 
   .card-glass {
-    @apply bg-card/80 backdrop-blur-sm rounded-xl border border-border/50;
+    @apply bg-card/80 backdrop-blur-sm rounded-lg border border-border/50;
     box-shadow: var(--shadow-md);
   }
 
-  /* Section spacing */
   .section {
     @apply py-16 md:py-24 lg:py-32;
   }
@@ -189,12 +186,10 @@
     @apply py-12 md:py-16 lg:py-20;
   }
 
-  /* Container */
   .container-tight {
     @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Gradient backgrounds */
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
@@ -203,7 +198,6 @@
     background: var(--gradient-subtle);
   }
 
-  /* Animated underline for links */
   .link-underline {
     @apply relative;
   }
@@ -219,7 +213,6 @@
 }
 
 @layer utilities {
-  /* Animation utilities */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
@@ -233,37 +226,20 @@
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
   }
 
-  /* Stagger animation delays */
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
