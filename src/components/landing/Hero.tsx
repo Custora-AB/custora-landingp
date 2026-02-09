@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TypewriterText } from "@/components/landing/TypewriterText";
 import { motion } from "framer-motion";
-import productMockup from "@/assets/product-mockup.png";
 import { modules, ModuleDialog, type ModuleInfo } from "@/components/landing/ModuleDialog";
+import { WorkflowIllustration } from "@/components/landing/WorkflowIllustration";
 
 interface HeroProps {
   onWaitlistClick: () => void;
@@ -80,19 +80,9 @@ export function Hero({ onWaitlistClick }: HeroProps) {
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: subDone ? 1 : 0, y: subDone ? 0 : 20 }}
-              transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-            >
-              <div className="rounded-xl border border-border bg-card p-2 shadow-lg">
-                <img
-                  src={productMockup}
-                  alt="Custora platform — share register and cap table management"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </motion.div>
+            <div className="flex items-center justify-center">
+              <WorkflowIllustration animate={subDone} />
+            </div>
           </div>
         </div>
       </section>
