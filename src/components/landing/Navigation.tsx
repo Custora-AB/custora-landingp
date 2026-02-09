@@ -23,7 +23,11 @@ export function Navigation({ onWaitlistClick, onPilotClick }: NavigationProps) {
             >
               Become pilot customer
             </Button>
-            <Button variant="default" size="sm" onClick={onWaitlistClick}>
+            <Button
+              size="sm"
+              onClick={onWaitlistClick}
+              className="text-white bg-gradient-to-r from-[hsl(260,60%,25%)] via-[hsl(235,70%,30%)] to-[hsl(215,80%,32%)] hover:from-[hsl(260,60%,22%)] hover:via-[hsl(235,70%,26%)] hover:to-[hsl(215,80%,28%)]"
+            >
               Join waitlist
             </Button>
           </div>
