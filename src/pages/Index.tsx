@@ -3,7 +3,7 @@ import { Navigation } from "@/components/landing/Navigation";
 import { Hero } from "@/components/landing/Hero";
 import { Footer } from "@/components/landing/Footer";
 import { WaitlistDialog } from "@/components/landing/WaitlistDialog";
-import workflowHero from "@/assets/workflow-hero.png";
+import networkBg from "@/assets/network-bg.png";
 
 const Index = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -14,7 +14,7 @@ const Index = () => {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${workflowHero})`,
+          backgroundImage: `url(${networkBg})`,
           backgroundPosition: "top left",
           backgroundRepeat: "no-repeat",
           backgroundSize: "60%",
