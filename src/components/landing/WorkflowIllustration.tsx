@@ -48,7 +48,7 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
     const timers: ReturnType<typeof setTimeout>[] = [];
 
     connections.forEach((conn, i) => {
-      const arrivalTime = (DOT_START_DELAY + i * DOT_STAGGER + DOT_DURATION) * 1000;
+      const arrivalTime = (DOT_START_DELAY + i * DOT_STAGGER + DOT_DURATION - 0.4) * 1000;
       const targetNode = conn[1];
       timers.push(setTimeout(() => triggerGlow(targetNode), arrivalTime));
     });
