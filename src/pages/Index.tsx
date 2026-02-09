@@ -1,21 +1,24 @@
+import { useState } from "react";
 import { Navigation } from "@/components/landing/Navigation";
 import { Hero } from "@/components/landing/Hero";
 import { ModulesGrid } from "@/components/landing/ModulesGrid";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { TrustStrip } from "@/components/landing/TrustStrip";
-import { WaitlistNewsletter } from "@/components/landing/WaitlistNewsletter";
 import { Footer } from "@/components/landing/Footer";
+import { WaitlistDialog } from "@/components/landing/WaitlistDialog";
 
 const Index = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      <Hero />
+      <Navigation onWaitlistClick={() => setWaitlistOpen(true)} />
+      <Hero onWaitlistClick={() => setWaitlistOpen(true)} />
       <ModulesGrid />
       <HowItWorks />
       <TrustStrip />
-      <WaitlistNewsletter />
       <Footer />
+      <WaitlistDialog open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
     </div>
   );
 };
