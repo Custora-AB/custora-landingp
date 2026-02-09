@@ -13,8 +13,10 @@ interface WaitlistDialogProps {
 
 export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
   const [waitlist, setWaitlist] = useState(true);
   const [newsletter, setNewsletter] = useState(false);
@@ -66,23 +68,38 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@company.com"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    placeholder="Company name"
                     required
                     className="h-11"
                   />
                   <Input
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    placeholder="Company (optional)"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder="Full name"
+                    required
+                    className="h-11"
+                  />
+                  <Input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email"
+                    required
+                    className="h-11"
+                  />
+                  <Input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="Phone number"
                     className="h-11"
                   />
                   <Input
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    placeholder="Your role (optional)"
+                    placeholder="Your role"
                     className="h-11"
                   />
 
