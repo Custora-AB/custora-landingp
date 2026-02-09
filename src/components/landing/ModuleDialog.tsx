@@ -79,30 +79,30 @@ export function ModuleDialog({ module, onClose }: ModuleDialogProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="relative z-10 w-full max-w-md mx-4 rounded-2xl bg-card border border-border shadow-xl overflow-hidden"
+            className="relative z-10 w-full max-w-md mx-4 rounded-2xl shadow-xl overflow-hidden"
+            style={{
+              background: "linear-gradient(to right, hsl(var(--primary)), hsl(220, 80%, 35%), hsl(225, 100%, 57%))",
+            }}
           >
-            {/* Accent top bar */}
-            <div className="h-1 w-full bg-accent" />
-
             <div className="p-7">
               <button
                 onClick={onClose}
-                className="absolute top-5 right-5 text-muted-foreground hover:text-foreground transition-colors"
+                className="absolute top-5 right-5 text-white/60 hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                <module.icon className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-4">
+                <module.icon className="w-6 h-6 text-white" />
               </div>
 
-              <h3 className="text-lg font-semibold text-foreground mb-1">{module.title}</h3>
-              <p className="text-sm text-muted-foreground mb-5">{module.tagline}</p>
+              <h3 className="text-lg font-semibold text-white mb-1">{module.title}</h3>
+              <p className="text-sm text-white/70 mb-5">{module.tagline}</p>
 
               <ul className="space-y-2.5">
                 {module.details.map((d) => (
-                  <li key={d} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-1.5" />
+                  <li key={d} className="flex items-start gap-2.5 text-sm text-white/80">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/50 shrink-0 mt-1.5" />
                     {d}
                   </li>
                 ))}
