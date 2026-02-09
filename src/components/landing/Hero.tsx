@@ -46,28 +46,28 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                 animate={{ opacity: subDone ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="mb-6 relative">
-                  <div className="absolute left-5 top-3 bottom-3 w-px bg-border" />
+                <div className="mb-6 relative bg-primary rounded-2xl p-5">
+                  <div className="absolute left-10 top-8 bottom-8 w-px bg-primary-foreground/20" />
                   <div className="space-y-0">
                     {modules.map((m, i) => (
                       <motion.button
                         key={m.title}
                         onClick={() => setActiveModule(m)}
-                        className="relative flex items-center gap-4 w-full text-left py-3 px-3 -mx-3 rounded-xl hover:bg-secondary/60 transition-all duration-200 group cursor-pointer"
+                        className="relative flex items-center gap-4 w-full text-left py-3 px-3 -mx-0 rounded-xl hover:bg-primary-foreground/10 transition-all duration-200 group cursor-pointer"
                         initial={{ opacity: 0, y: 10 }}
                         animate={subDone ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.35, delay: 0.1 + i * 0.1, ease: "easeOut" }}
                       >
-                        <div className="relative z-10 w-10 h-10 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center shrink-0 transition-colors duration-200 ring-2 ring-background">
-                          <m.icon className="w-5 h-5 text-accent" />
+                        <div className="relative z-10 w-10 h-10 rounded-xl bg-primary-foreground/15 group-hover:bg-primary-foreground/25 flex items-center justify-center shrink-0 transition-colors duration-200">
+                          <m.icon className="w-5 h-5 text-primary-foreground" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <span className="text-sm font-medium text-foreground group-hover:text-accent transition-colors">
+                          <span className="text-sm font-medium text-primary-foreground group-hover:text-accent transition-colors">
                             {m.title}
                           </span>
-                          <span className="block text-xs text-muted-foreground mt-0.5">{m.tagline}</span>
+                          <span className="block text-xs text-primary-foreground/60 mt-0.5">{m.tagline}</span>
                         </div>
-                        <span className="text-muted-foreground/40 group-hover:text-accent transition-colors text-xs">
+                        <span className="text-primary-foreground/30 group-hover:text-accent transition-colors text-xs">
                           →
                         </span>
                       </motion.button>
