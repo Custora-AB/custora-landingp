@@ -19,7 +19,7 @@ export function Navigation({ onWaitlistClick, onPilotClick }: NavigationProps) {
             <Button
               size="sm"
               onClick={onPilotClick}
-              className="text-white bg-gradient-to-r from-[hsl(225,90%,45%)] via-[hsl(230,95%,50%)] to-[hsl(220,85%,42%)] hover:from-[hsl(225,90%,40%)] hover:via-[hsl(230,95%,45%)] hover:to-[hsl(220,85%,37%)]"
+              className="text-white bg-gradient-to-r from-[hsl(225,80%,28%)] via-[hsl(220,90%,42%)] to-[hsl(215,95%,55%)] hover:from-[hsl(225,80%,24%)] hover:via-[hsl(220,90%,38%)] hover:to-[hsl(215,95%,50%)]"
             >
               Become pilot customer
             </Button>
