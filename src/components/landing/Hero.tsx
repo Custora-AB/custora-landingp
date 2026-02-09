@@ -83,9 +83,10 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
                   transition={{ duration: 0.35, delay: 0.1 + modules.length * 0.1, ease: "easeOut" }}
                 >
                   <Button
+                    variant="default"
                     size="lg"
                     onClick={onPilotClick}
-                    className="text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-gradient-to-r from-[hsl(225,80%,28%)] via-[hsl(220,90%,42%)] to-[hsl(215,95%,55%)] hover:from-[hsl(225,80%,24%)] hover:via-[hsl(220,90%,38%)] hover:to-[hsl(215,95%,50%)]"
+                    className="shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     Become pilot customer
                   </Button>

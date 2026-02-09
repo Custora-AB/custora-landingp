@@ -16,11 +16,7 @@ export function Navigation({ onWaitlistClick, onPilotClick }: NavigationProps) {
             <span className="text-lg font-semibold text-foreground tracking-tight">Custora</span>
           </a>
           <div className="flex items-center gap-2">
-            <Button
-              size="sm"
-              onClick={onPilotClick}
-              className="text-white bg-gradient-to-r from-[hsl(225,80%,28%)] via-[hsl(220,90%,42%)] to-[hsl(215,95%,55%)] hover:from-[hsl(225,80%,24%)] hover:via-[hsl(220,90%,38%)] hover:to-[hsl(215,95%,50%)]"
-            >
+            <Button variant="default" size="sm" onClick={onPilotClick}>
               Become pilot customer
             </Button>
             <Button variant="hero" size="sm" onClick={onWaitlistClick}>
