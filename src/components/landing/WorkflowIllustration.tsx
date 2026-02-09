@@ -18,7 +18,7 @@ const connections: [number, number][] = [
 ];
 
 const DOT_DURATION = 2.5; // seconds
-const DOT_START_DELAY = 2; // seconds after animate=true
+const DOT_START_DELAY = 3; // seconds after animate=true
 const DOT_STAGGER = 0.5; // seconds between each dot
 
 function getNodeCenter(node: (typeof nodes)[0]) {
