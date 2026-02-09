@@ -85,7 +85,7 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
                   <Button
                     size="lg"
                     onClick={onPilotClick}
-                    className="text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-gradient-to-r from-[hsl(260,60%,25%)] via-[hsl(235,70%,30%)] to-[hsl(215,80%,32%)] hover:from-[hsl(260,60%,22%)] hover:via-[hsl(235,70%,26%)] hover:to-[hsl(215,80%,28%)]"
+                    className="text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-gradient-to-r from-[hsl(220,70%,20%)] via-[hsl(225,75%,25%)] to-[hsl(230,80%,30%)] hover:from-[hsl(220,70%,17%)] hover:via-[hsl(225,75%,22%)] hover:to-[hsl(230,80%,27%)]"
                   >
                     Become pilot customer
                   </Button>
