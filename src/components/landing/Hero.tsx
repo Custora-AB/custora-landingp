@@ -3,34 +3,42 @@ import { Button } from "@/components/ui/button";
 import { TypewriterText } from "@/components/landing/TypewriterText";
 import { motion } from "framer-motion";
 import productMockup from "@/assets/product-mockup.png";
+import { CheckCircle } from "lucide-react";
 
 interface HeroProps {
   onWaitlistClick: () => void;
 }
+
+const bullets = [
+  "Digital share register & cap table",
+  "Regulatory reporting",
+  "KYC collection",
+  "Investor data room",
+];
 
 export function Hero({ onWaitlistClick }: HeroProps) {
   const [headlineDone, setHeadlineDone] = useState(false);
   const [subDone, setSubDone] = useState(false);
 
   return (
-    <section className="pt-28 pb-20 lg:pt-36 lg:pb-28">
+    <section className="pt-20 pb-0 lg:pt-24 lg:pb-0 min-h-[calc(100vh-4rem)] flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           <div>
-            <h1 className="mb-6 min-h-[2.4em]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4 leading-[1.1] min-h-[1.8em]">
               <TypewriterText
                 text="Infrastructure for ownership in private companies"
-                speed={35}
+                speed={30}
                 delay={300}
                 onComplete={() => setHeadlineDone(true)}
               />
             </h1>
 
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-lg mb-10 min-h-[1.8em]">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-lg mb-5 min-h-[1.4em]">
               {headlineDone && (
                 <TypewriterText
-                  text="A single source of truth for share registers, compliance, and stakeholder collaboration across your portfolio."
-                  speed={20}
+                  text="A single source of truth for share registers, compliance, and stakeholder collaboration."
+                  speed={18}
                   delay={100}
                   onComplete={() => setSubDone(true)}
                 />
@@ -40,18 +48,27 @@ export function Hero({ onWaitlistClick }: HeroProps) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: subDone ? 1 : 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.3 }}
             >
-              <Button variant="hero" size="xl" onClick={onWaitlistClick}>
+              <ul className="space-y-2 mb-6">
+                {bullets.map((b) => (
+                  <li key={b} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 text-accent shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              <Button variant="hero" size="lg" onClick={onWaitlistClick}>
                 Join waitlist
               </Button>
             </motion.div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: subDone ? 1 : 0, y: subDone ? 0 : 30 }}
-            transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: subDone ? 1 : 0, y: subDone ? 0 : 20 }}
+            transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             <div className="rounded-xl border border-border bg-card p-2 shadow-lg">
               <img
