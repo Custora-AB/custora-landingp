@@ -67,41 +67,56 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
                   Join the waitlist to be first in line.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-3">
-                  <Input
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    placeholder="Company name"
-                    required
-                    className="h-11"
-                  />
-                  <Input
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    placeholder="Full name"
-                    required
-                    className="h-11"
-                  />
-                  <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email"
-                    required
-                    className="h-11"
-                  />
-                  <Input
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="Phone number"
-                    className="h-11"
-                  />
-                  <Input
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
-                    placeholder="Your role"
-                    className="h-11"
-                  />
+                  <div>
+                    <label className="text-xs font-medium text-primary mb-1 block">Company name</label>
+                    <Input
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                      placeholder="Company name"
+                      required
+                      className="h-11"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-primary mb-1 block">Full name</label>
+                    <Input
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      placeholder="Full name"
+                      required
+                      className="h-11"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-primary mb-1 block">Email</label>
+                    <Input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email"
+                      required
+                      className="h-11"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-primary mb-1 block">Phone number</label>
+                    <Input
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Phone number"
+                      className="h-11"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-primary mb-1 block">Your role</label>
+                    <Input
+                      value={role}
+                      onChange={(e) => setRole(e.target.value)}
+                      placeholder="Your role"
+                      className="h-11"
+                    />
+                  </div>
 
                   <div className="space-y-3 pt-2">
                     <div className="flex items-center gap-2">
