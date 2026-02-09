@@ -12,76 +12,62 @@ const modules = [
   {
     icon: FileSpreadsheet,
     title: "Share register & cap table",
-    description: "Maintain accurate ownership records across multiple entities. Track share classes, options, and convertibles in one place.",
-    features: ["Multi-entity structures", "Share classes & instruments", "Version history"],
+    description: "Single source of truth for ownership across entities.",
   },
   {
     icon: ArrowRightLeft,
     title: "Corporate actions",
-    description: "Execute transfers, issuances, and splits with proper documentation. Every change is logged and traceable.",
-    features: ["Issuances & transfers", "Stock splits", "Full audit trail"],
+    description: "Issuances, transfers, and splits — fully auditable.",
   },
   {
     icon: Users,
-    title: "Governance",
-    description: "Organise board decisions, resolutions, and minutes. Keep all governance records structured and accessible.",
-    features: ["Board resolutions", "Meeting minutes", "Document archive"],
+    title: "Governance workflows",
+    description: "Board decisions, minutes, and document logs.",
   },
   {
     icon: ClipboardCheck,
-    title: "Compliance workflows",
-    description: "Generate audit-ready exports and jurisdiction-specific reports. Stay prepared for regulatory requests.",
-    features: ["Automated exports", "Compliance reports", "Audit preparation"],
+    title: "Compliance-ready exports",
+    description: "Audit trails and jurisdiction-specific reporting.",
   },
   {
     icon: Eye,
     title: "Investor portal",
-    description: "Give stakeholders secure access to their holdings and documents. Reduce manual reporting requests.",
-    features: ["Self-service access", "Document sharing", "Holdings overview"],
+    description: "Controlled access for stakeholders and investors.",
   },
   {
     icon: UserCheck,
-    title: "KYC (light)",
-    description: "Collect and verify investor information with structured forms. Review and approve submissions manually.",
-    features: ["Document collection", "Manual review", "Approval workflow"],
+    title: "KYC collection",
+    description: "Structured intake and manual review workflows.",
   },
 ];
 
 export function ModulesGrid() {
   return (
-    <section className="section bg-gradient-subtle">
+    <section className="py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="mb-6">Everything you need to manage private ownership</h2>
-          <p className="text-lg text-muted-foreground">
-            Purpose-built modules that work together seamlessly. Start with what you need, 
-            expand as you grow.
+        <ScrollReveal className="max-w-2xl mx-auto text-center mb-14">
+          <h2 className="mb-4">Built for ownership management</h2>
+          <p className="text-muted-foreground">
+            Purpose-built modules that work together. Start with what you need.
           </p>
         </ScrollReveal>
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.08}>
+        <StaggerContainer
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          staggerDelay={0.06}
+        >
           {modules.map((module) => (
-            <StaggerItem key={module.title} className="card-elevated p-6 lg:p-8 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-teal-light flex items-center justify-center">
-                  <module.icon className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{module.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{module.description}</p>
-                </div>
+            <StaggerItem
+              key={module.title}
+              className="rounded-xl border border-border bg-card p-6 space-y-3"
+            >
+              <div className="w-10 h-10 rounded-lg bg-teal-light flex items-center justify-center">
+                <module.icon className="w-5 h-5 text-accent" />
               </div>
-              
-              <div className="pt-4 border-t border-border">
-                <ul className="space-y-2">
-                  {module.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h4 className="text-base font-semibold text-foreground">{module.title}</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {module.description}
+              </p>
             </StaggerItem>
           ))}
         </StaggerContainer>

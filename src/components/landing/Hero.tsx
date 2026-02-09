@@ -1,101 +1,43 @@
 import { Button } from "@/components/ui/button";
 import productMockup from "@/assets/product-mockup.png";
 import { motion } from "framer-motion";
+
 export function Hero() {
-  return <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden bg-gradient-subtle">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-teal-light to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-secondary to-transparent rounded-full blur-3xl" />
+  return (
+    <section className="pt-28 pb-20 lg:pt-36 lg:pb-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="max-w-3xl mx-auto text-center mb-16"
+        >
+          <h1 className="mb-6">
+            Ownership infrastructure for private companies
+          </h1>
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            One platform for share registers, compliance, and stakeholder collaboration.
+          </p>
+          <Button variant="hero" size="xl" asChild>
+            <a href="#waitlist">Join waitlist</a>
+          </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="rounded-xl border border-border bg-card p-2 shadow-lg">
+            <img
+              src={productMockup}
+              alt="Custora platform — share register and cap table management"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </motion.div>
       </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Content */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 24
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          ease: [0.21, 0.47, 0.32, 0.98]
-        }} className="space-y-8">
-            <div className="space-y-4">
-            <h1 className="text-foreground">
-                Infrastructure for ownership management in private European companies
-              </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                A single source of truth for share registers, compliance, and stakeholder collaboration across your portfolio.
-              </p>
-            </div>
-
-            <motion.div initial={{
-            opacity: 0,
-            y: 16
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: 0.2,
-            ease: [0.21, 0.47, 0.32, 0.98]
-          }} className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" asChild>
-                <a href="#waitlist">Join waitlist</a>
-              </Button>
-            </motion.div>
-
-            {/* Trust indicators */}
-            <motion.div initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5,
-            delay: 0.4
-          }} className="pt-4 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">
-            </p>
-              <div className="flex flex-wrap gap-6 items-center opacity-60">
-                
-                <span className="text-sm font-medium text-foreground">
-              </span>
-                <span className="text-sm font-medium text-foreground">
-              </span>
-                <span className="text-sm font-medium text-foreground">
-              </span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right: Product Mockup */}
-          <motion.div initial={{
-          opacity: 0,
-          x: 40
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.7,
-          delay: 0.15,
-          ease: [0.21, 0.47, 0.32, 0.98]
-        }} className="relative">
-            <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-teal/20 to-accent/10 rounded-2xl blur-2xl" />
-              
-              {/* Main image container */}
-              <div className="relative card-elevated p-2 lg:p-3">
-                <img src={productMockup} alt="Custora platform interface showing connected ownership workflows" className="w-full h-auto rounded-lg" />
-              </div>
-
-              {/* Floating badge */}
-              
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>;
+    </section>
+  );
 }
