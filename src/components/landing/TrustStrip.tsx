@@ -1,44 +1,23 @@
 import { Shield, FileText, Lock } from "lucide-react";
-import { StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
-const trustItems = [
-  {
-    icon: Shield,
-    title: "GDPR-ready",
-    description: "Built for European data protection requirements",
-  },
-  {
-    icon: FileText,
-    title: "Complete audit log",
-    description: "Every action tracked and timestamped",
-  },
-  {
-    icon: Lock,
-    title: "Access control",
-    description: "Granular role-based permissions",
-  },
+const items = [
+  { icon: Shield, label: "GDPR-ready" },
+  { icon: Lock, label: "Role-based access" },
+  { icon: FileText, label: "Complete audit log" },
 ];
 
 export function TrustStrip() {
   return (
-    <section className="py-12 lg:py-16 bg-primary">
+    <section className="py-10 lg:py-14 border-y border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="grid md:grid-cols-3 gap-8 lg:gap-12" staggerDelay={0.1}>
-          {trustItems.map((item) => (
-            <StaggerItem
-              key={item.title}
-              className="flex items-center gap-4 text-center md:text-left justify-center md:justify-start"
-            >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-primary-foreground">{item.title}</h4>
-                <p className="text-sm text-primary-foreground/70">{item.description}</p>
-              </div>
-            </StaggerItem>
+        <div className="flex flex-wrap justify-center gap-10 lg:gap-16">
+          {items.map((item) => (
+            <div key={item.label} className="flex items-center gap-2 text-muted-foreground">
+              <item.icon className="w-4 h-4" />
+              <span className="text-sm font-medium">{item.label}</span>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
