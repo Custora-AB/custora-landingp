@@ -4,7 +4,11 @@ import { TypewriterText } from "@/components/landing/TypewriterText";
 import { motion } from "framer-motion";
 import workflowHero from "@/assets/workflow-hero.png";
 
-export function Hero() {
+interface HeroProps {
+  onWaitlistClick: () => void;
+}
+
+export function Hero({ onWaitlistClick }: HeroProps) {
   const [headlineDone, setHeadlineDone] = useState(false);
   const [subDone, setSubDone] = useState(false);
 
@@ -36,13 +40,10 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: subDone ? 1 : 0 }}
             transition={{ duration: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex items-center justify-center"
           >
-            <Button variant="hero" size="xl" asChild>
-              <a href="#waitlist">Join waitlist</a>
-            </Button>
-            <Button variant="heroSecondary" size="xl" asChild>
-              <a href="#waitlist">Book a pilot call</a>
+            <Button variant="hero" size="xl" onClick={onWaitlistClick}>
+              Join waitlist
             </Button>
           </motion.div>
         </div>

@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-export function Navigation() {
+interface NavigationProps {
+  onWaitlistClick: () => void;
+}
+
+export function Navigation({ onWaitlistClick }: NavigationProps) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,8 +14,8 @@ export function Navigation() {
             <img src={logo} alt="Custora" className="w-7 h-7" />
             <span className="text-lg font-semibold text-foreground">Custora</span>
           </a>
-          <Button variant="default" size="sm" asChild>
-            <a href="#waitlist">Join waitlist</a>
+          <Button variant="default" size="sm" onClick={onWaitlistClick}>
+            Join waitlist
           </Button>
         </div>
       </div>
