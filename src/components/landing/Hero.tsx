@@ -7,9 +7,10 @@ import { WorkflowIllustration } from "@/components/landing/WorkflowIllustration"
 
 interface HeroProps {
   onWaitlistClick: () => void;
+  onPilotClick: () => void;
 }
 
-export function Hero({ onWaitlistClick }: HeroProps) {
+export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
   const [headlineDone, setHeadlineDone] = useState(false);
   const [subDone, setSubDone] = useState(false);
   const [activeModule, setActiveModule] = useState<ModuleInfo | null>(null);
@@ -76,10 +77,18 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                 </div>
 
                 <motion.div
+                  className="flex items-center gap-3"
                   initial={{ opacity: 0, y: 10 }}
                   animate={subDone ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.35, delay: 0.1 + modules.length * 0.1, ease: "easeOut" }}
                 >
+                  <Button
+                    size="lg"
+                    onClick={onPilotClick}
+                    className="text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-gradient-to-r from-[hsl(260,80%,50%)] via-[hsl(230,90%,55%)] to-[hsl(200,100%,50%)] hover:from-[hsl(260,80%,45%)] hover:via-[hsl(230,90%,50%)] hover:to-[hsl(200,100%,45%)]"
+                  >
+                    Become pilot customer
+                  </Button>
                   <Button variant="hero" size="lg" onClick={onWaitlistClick}>
                     Join waitlist
                   </Button>
