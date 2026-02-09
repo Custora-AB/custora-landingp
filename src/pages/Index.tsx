@@ -17,9 +17,9 @@ const Index = () => {
           backgroundImage: `url(${networkBg})`,
           backgroundPosition: "top left",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "60%",
-          maskImage: "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 30%, transparent 60%)",
-          WebkitMaskImage: "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 30%, transparent 60%)",
+          backgroundSize: "70%",
+          maskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1) 50%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 0% 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1) 50%, transparent 70%)",
         }}
       />
       <Navigation onWaitlistClick={() => setWaitlistOpen(true)} />
