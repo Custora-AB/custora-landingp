@@ -64,29 +64,15 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0" />
-          </radialGradient>
-          {/* Node glow filter */}
-          <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="6" result="blur" />
+          {/* Line glow filter */}
+          <filter id="line-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
-
-        <motion.circle
-          cx="180"
-          cy="130"
-          r="60"
-          fill="url(#hub-glow)"
-          initial={{ opacity: 0 }}
-          animate={animate ? { opacity: [0, 1, 0.7] } : {}}
-          transition={{ duration: 3, delay: 1.5, ease: "easeInOut" }}
-        />
 
         {connections.map((conn, i) => {
           const from = getNodeCenter(nodes[conn[0]]);
@@ -108,6 +94,44 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
               strokeDashoffset={400}
               animate={animate ? { strokeDashoffset: 0 } : {}}
               transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeInOut" }}
+            />
+          );
+        })}
+
+        {/* Glowing connection lines - synced with traveling dots */}
+        {connections.map((conn, i) => {
+          const from = getNodeCenter(nodes[conn[0]]);
+          const to = getNodeCenter(nodes[conn[1]]);
+          const dx = to.cx - from.cx;
+          const dy = to.cy - from.cy;
+          const cx1 = from.cx + dx * 0.5 + (i % 2 === 0 ? 15 : -15);
+          const cy1 = from.cy + dy * 0.5;
+          const d = `M ${from.cx} ${from.cy} Q ${cx1} ${cy1} ${to.cx} ${to.cy}`;
+
+          return (
+            <motion.path
+              key={`glow-${conn[0]}-${conn[1]}`}
+              d={d}
+              stroke="hsl(var(--accent))"
+              strokeWidth="3"
+              fill="none"
+              filter="url(#line-glow)"
+              strokeDasharray={400}
+              strokeDashoffset={400}
+              initial={{ opacity: 0 }}
+              animate={
+                animate
+                  ? {
+                      opacity: [0, 0.6, 0.6, 0],
+                      strokeDashoffset: [400, 0],
+                    }
+                  : {}
+              }
+              transition={{
+                duration: DOT_DURATION,
+                delay: DOT_START_DELAY + i * DOT_STAGGER,
+                ease: "easeInOut",
+              }}
             />
           );
         })}
