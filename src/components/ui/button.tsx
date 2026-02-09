@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Hero variants for landing page
-        hero: "bg-primary text-primary-foreground hover:bg-navy-light shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+        hero: "text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 [background-color:hsl(225,100%,57%)] hover:[background-color:hsl(225,100%,50%)]",
         heroSecondary: "bg-card text-foreground border border-border hover:bg-secondary shadow-md hover:shadow-lg transform hover:-translate-y-0.5",
         // Accent teal button
         accent: "bg-accent text-accent-foreground hover:bg-teal-dark shadow-md hover:shadow-lg",
