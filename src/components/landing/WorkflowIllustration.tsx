@@ -20,7 +20,6 @@ const connections: [number, number][] = [
 const DOT_DURATION = 2.5; // seconds
 const DOT_START_DELAY = 2; // seconds after animate=true
 const DOT_STAGGER = 0.5; // seconds between each dot
-const CYCLE = DOT_DURATION + 4; // duration + repeatDelay
 
 function getNodeCenter(node: (typeof nodes)[0]) {
   return { cx: node.x + 65, cy: node.y + 22 };
@@ -45,21 +44,14 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
 
     const timers: ReturnType<typeof setTimeout>[] = [];
 
-    const startCycle = () => {
-      connections.forEach((conn, i) => {
-        // Dot arrives at target node at DOT_START_DELAY + i*DOT_STAGGER + DOT_DURATION
-        const arrivalTime = (DOT_START_DELAY + i * DOT_STAGGER + DOT_DURATION) * 1000;
-        const targetNode = conn[1];
-        timers.push(setTimeout(() => triggerGlow(targetNode), arrivalTime));
-      });
-    };
-
-    startCycle();
-    const interval = setInterval(startCycle, CYCLE * 1000);
+    connections.forEach((conn, i) => {
+      const arrivalTime = (DOT_START_DELAY + i * DOT_STAGGER + DOT_DURATION) * 1000;
+      const targetNode = conn[1];
+      timers.push(setTimeout(() => triggerGlow(targetNode), arrivalTime));
+    });
 
     return () => {
       timers.forEach(clearTimeout);
-      clearInterval(interval);
     };
   }, [animate, triggerGlow]);
 
@@ -92,8 +84,8 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
           r="60"
           fill="url(#hub-glow)"
           initial={{ opacity: 0 }}
-          animate={animate ? { opacity: [0, 1, 0.5, 1] } : {}}
-          transition={{ duration: 3, delay: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          animate={animate ? { opacity: [0, 1, 0.7] } : {}}
+          transition={{ duration: 3, delay: 1.5, ease: "easeInOut" }}
         />
 
         {connections.map((conn, i) => {
@@ -143,8 +135,6 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
                 duration: DOT_DURATION,
                 delay: DOT_START_DELAY + i * DOT_STAGGER,
                 ease: "easeInOut",
-                repeat: Infinity,
-                repeatDelay: 4,
               }}
             />
           );
