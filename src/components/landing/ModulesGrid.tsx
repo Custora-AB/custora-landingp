@@ -59,7 +59,7 @@ export function ModulesGrid() {
           {modules.map((module) => (
             <StaggerItem
               key={module.title}
-              className="rounded-xl border border-border bg-card p-6 space-y-3"
+              className="rounded-xl border border-border bg-card p-6 space-y-3 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md"
             >
               <div className="w-10 h-10 rounded-lg bg-teal-light flex items-center justify-center">
                 <module.icon className="w-5 h-5 text-accent" />
