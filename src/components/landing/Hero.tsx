@@ -45,19 +45,34 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                 animate={{ opacity: subDone ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <ul className="space-y-2 mb-6">
-                  {modules.map((m) => (
-                    <li key={m.title}>
+                <div className="mb-6 relative">
+                  {/* Vertical connecting line */}
+                  <div className="absolute left-5 top-3 bottom-3 w-px bg-border" />
+
+                  <div className="space-y-0">
+                    {modules.map((m, i) => (
                       <button
+                        key={m.title}
                         onClick={() => setActiveModule(m)}
-                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
+                        className="relative flex items-center gap-4 w-full text-left py-3 px-3 -mx-3 rounded-xl hover:bg-secondary/60 transition-all duration-200 group cursor-pointer"
                       >
-                        <m.icon className="w-4 h-4 text-accent shrink-0" />
-                        <span className="group-hover:underline underline-offset-2">{m.title}</span>
+                        {/* Node dot on the line */}
+                        <div className="relative z-10 w-10 h-10 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center shrink-0 transition-colors duration-200 ring-2 ring-background">
+                          <m.icon className="w-5 h-5 text-accent" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="text-sm font-medium text-foreground group-hover:text-accent transition-colors">
+                            {m.title}
+                          </span>
+                          <span className="block text-xs text-muted-foreground mt-0.5">{m.tagline}</span>
+                        </div>
+                        <span className="text-muted-foreground/40 group-hover:text-accent transition-colors text-xs">
+                          →
+                        </span>
                       </button>
-                    </li>
-                  ))}
-                </ul>
+                    ))}
+                  </div>
+                </div>
 
                 <Button variant="hero" size="lg" onClick={onWaitlistClick}>
                   Join waitlist
