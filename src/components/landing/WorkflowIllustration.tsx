@@ -28,7 +28,9 @@ const nodes = [{
 }];
 const connections: [number, number][] = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]];
 const DOT_DURATION = 2.5; // seconds
-const DOT_START_DELAY = 3; // seconds after animate=true
+const NODE_STAGGER = 0.15; // seconds between each node appearing
+const NODES_DONE_TIME = NODE_STAGGER * (nodes.length - 1) + 0.4; // time for all nodes to finish appearing
+const DOT_START_DELAY = NODES_DONE_TIME + 0.3; // dots start after all nodes are visible
 const DOT_STAGGER = 0.5; // seconds between each dot
 
 function getNodeCenter(node: (typeof nodes)[0]) {
@@ -43,11 +45,8 @@ export function WorkflowIllustration({
   animate: boolean;
 }) {
   const [glowingNodes, setGlowingNodes] = useState<Set<number>>(new Set());
-  const [visibleNodes, setVisibleNodes] = useState<Set<number>>(new Set([0])); // source node starts visible
 
   const triggerGlow = useCallback((nodeId: number) => {
-    // Make node visible (pop up) and glow
-    setVisibleNodes(prev => new Set(prev).add(nodeId));
     setGlowingNodes(prev => new Set(prev).add(nodeId));
     setTimeout(() => {
       setGlowingNodes(prev => {
@@ -143,7 +142,7 @@ export function WorkflowIllustration({
       {/* Node cards */}
       {nodes.map((node, i) => {
       const isGlowing = glowingNodes.has(node.id);
-      const isVisible = visibleNodes.has(node.id);
+      
       return <motion.div key={node.id} className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary" style={{
         left: `${node.x / 440 * 100}%`,
         top: `${node.y / 360 * 100}%`,
@@ -152,7 +151,7 @@ export function WorkflowIllustration({
       }} initial={{
         opacity: 0,
         scale: 0.6
-      }} animate={isVisible && animate ? {
+      }} animate={animate ? {
         opacity: 1,
         scale: isGlowing ? 1.08 : 1
       } : {
@@ -160,6 +159,7 @@ export function WorkflowIllustration({
         scale: 0.6
       }} transition={{
         duration: 0.4,
+        delay: i * NODE_STAGGER,
         ease: [0.21, 0.47, 0.32, 0.98]
       }}>
             <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300" style={{
