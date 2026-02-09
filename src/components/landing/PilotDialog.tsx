@@ -59,7 +59,7 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
               <>
                 <h3 className="text-xl font-semibold text-foreground mb-1">Request pilot access</h3>
                 <p className="text-sm text-muted-foreground mb-6">
-                  Be among the first to experience Custora hands-on.
+                  Be among the first to experience Custora.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <div>
