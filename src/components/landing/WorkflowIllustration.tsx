@@ -6,7 +6,8 @@ const nodes = [{
   label: "Share Register",
   icon: FileSpreadsheet,
   x: 150,
-  y: 5
+  y: 5,
+  cardOffsetY: 20
 }, {
   id: 1,
   label: "Reporting",
@@ -145,7 +146,7 @@ export function WorkflowIllustration({
       
       return <motion.div key={node.id} className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary" style={{
         left: `${node.x / 440 * 100}%`,
-        top: `${node.y / 360 * 100}%`,
+        top: `${(node.y + (node.cardOffsetY || 0)) / 360 * 100}%`,
         border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsla(var(--primary-foreground) / 0.15)"}`,
         boxShadow: isGlowing ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)" : "0 1px 4px 0 rgba(5, 28, 44, 0.15)"
       }} initial={{
