@@ -6,7 +6,7 @@ const nodes = [
   { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 50 },
   { id: 1, label: "Reporting", icon: ClipboardCheck, x: 240, y: 100 },
   { id: 2, label: "Data Room", icon: FolderLock, x: 120, y: 200 },
-  { id: 3, label: "KYC", icon: UserCheck, x: 0, y: 100 },
+  { id: 3, label: "KYC", icon: UserCheck, x: -30, y: 100 },
 ];
 
 const connections: [number, number][] = [
