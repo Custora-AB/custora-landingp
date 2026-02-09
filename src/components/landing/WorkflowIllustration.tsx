@@ -29,11 +29,11 @@ const nodes = [{
   y: 140
 }];
 const connections: [number, number][] = [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2]];
-const DOT_DURATION = 2.5; // seconds
+const DOT_DURATION = 1.4; // seconds
 const NODE_STAGGER = 0.15; // seconds between each node appearing
 const NODES_DONE_TIME = NODE_STAGGER * (nodes.length - 1) + 0.4; // time for all nodes to finish appearing
 const DOT_START_DELAY = NODES_DONE_TIME + 0.3; // dots start after all nodes are visible
-const DOT_STAGGER = 0.5; // seconds between each dot
+const DOT_STAGGER = 0.3; // seconds between each dot
 
 function getNodeCenter(node: (typeof nodes)[0]) {
   return {
