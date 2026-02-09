@@ -3,10 +3,10 @@ import { FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-r
 import { useState, useEffect, useCallback } from "react";
 
 const nodes = [
-  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 50 },
-  { id: 1, label: "Reporting", icon: ClipboardCheck, x: 240, y: 100 },
-  { id: 2, label: "Data Room", icon: FolderLock, x: 120, y: 200 },
-  { id: 3, label: "KYC", icon: UserCheck, x: 0, y: 100 },
+  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 150, y: 10 },
+  { id: 1, label: "Reporting", icon: ClipboardCheck, x: 290, y: 140 },
+  { id: 2, label: "Data Room", icon: FolderLock, x: 150, y: 270 },
+  { id: 3, label: "KYC", icon: UserCheck, x: 10, y: 140 },
 ];
 
 const connections: [number, number][] = [
@@ -59,8 +59,8 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
   }, [animate, triggerGlow]);
 
   return (
-    <div className="w-full aspect-square max-w-[420px] mx-auto relative">
-      <svg viewBox="-10 -10 380 280" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+    <div className="w-full aspect-square max-w-[520px] mx-auto relative">
+      <svg viewBox="-10 -10 460 380" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           {/* Line glow filter */}
           <filter id="line-glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -172,8 +172,8 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
             key={node.id}
             className="absolute flex items-center gap-2.5 rounded-xl px-4 py-2.5 bg-primary"
             style={{
-              left: `${(node.x / 360) * 100}%`,
-              top: `${(node.y / 260) * 100}%`,
+              left: `${(node.x / 440) * 100}%`,
+              top: `${(node.y / 360) * 100}%`,
               border: `1px solid ${isGlowing ? "hsl(var(--accent))" : "hsla(var(--primary-foreground) / 0.15)"}`,
               boxShadow: isGlowing
                 ? "0 0 16px 4px hsla(var(--accent) / 0.25), 0 0 4px 1px hsla(var(--accent) / 0.15)"
