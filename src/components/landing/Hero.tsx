@@ -13,7 +13,7 @@ export function Hero() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="mb-6 min-h-[2.4em]">
             <TypewriterText
-              text="Ownership infrastructure for private companies"
+              text="Infrastructure for ownership in private companies"
               speed={35}
               delay={300}
               onComplete={() => setHeadlineDone(true)}
@@ -23,7 +23,7 @@ export function Hero() {
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 min-h-[1.8em]">
             {headlineDone && (
               <TypewriterText
-                text="A system of record for share registers, governance, and compliance."
+                text="A single source of truth for share registers, compliance, and stakeholder collaboration across your portfolio."
                 speed={20}
                 delay={100}
                 onComplete={() => setSubDone(true)}
