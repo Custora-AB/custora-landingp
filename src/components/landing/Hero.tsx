@@ -47,17 +47,17 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mb-6 relative">
-                  {/* Vertical connecting line */}
                   <div className="absolute left-5 top-3 bottom-3 w-px bg-border" />
-
                   <div className="space-y-0">
                     {modules.map((m, i) => (
-                      <button
+                      <motion.button
                         key={m.title}
                         onClick={() => setActiveModule(m)}
                         className="relative flex items-center gap-4 w-full text-left py-3 px-3 -mx-3 rounded-xl hover:bg-secondary/60 transition-all duration-200 group cursor-pointer"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={subDone ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.35, delay: 0.1 + i * 0.1, ease: "easeOut" }}
                       >
-                        {/* Node dot on the line */}
                         <div className="relative z-10 w-10 h-10 rounded-xl bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center shrink-0 transition-colors duration-200 ring-2 ring-background">
                           <m.icon className="w-5 h-5 text-accent" />
                         </div>
@@ -70,14 +70,20 @@ export function Hero({ onWaitlistClick }: HeroProps) {
                         <span className="text-muted-foreground/40 group-hover:text-accent transition-colors text-xs">
                           →
                         </span>
-                      </button>
+                      </motion.button>
                     ))}
                   </div>
                 </div>
 
-                <Button variant="hero" size="lg" onClick={onWaitlistClick}>
-                  Join waitlist
-                </Button>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={subDone ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.35, delay: 0.1 + modules.length * 0.1, ease: "easeOut" }}
+                >
+                  <Button variant="hero" size="lg" onClick={onWaitlistClick}>
+                    Join waitlist
+                  </Button>
+                </motion.div>
               </motion.div>
             </div>
 
