@@ -3,10 +3,10 @@ import { FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-r
 import { useState, useEffect, useCallback } from "react";
 
 const nodes = [
-  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 10 },
-  { id: 1, label: "Reporting", icon: ClipboardCheck, x: 250, y: 80 },
-  { id: 2, label: "KYC", icon: UserCheck, x: 250, y: 175 },
-  { id: 3, label: "Data Room", icon: FolderLock, x: 120, y: 210 },
+  { id: 0, label: "Share Register", icon: FileSpreadsheet, x: 120, y: 0 },
+  { id: 1, label: "Reporting", icon: ClipboardCheck, x: 240, y: 100 },
+  { id: 2, label: "Data Room", icon: FolderLock, x: 120, y: 200 },
+  { id: 3, label: "KYC", icon: UserCheck, x: 0, y: 100 },
 ];
 
 const connections: [number, number][] = [
