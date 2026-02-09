@@ -18,8 +18,8 @@ const Index = () => {
           backgroundPosition: "top left",
           backgroundRepeat: "no-repeat",
           backgroundSize: "60%",
-          maskImage: "linear-gradient(135deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.06) 25%, transparent 55%)",
-          WebkitMaskImage: "linear-gradient(135deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.06) 25%, transparent 55%)",
+          maskImage: "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 30%, transparent 60%)",
+          WebkitMaskImage: "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 30%, transparent 60%)",
         }}
       />
       <Navigation onWaitlistClick={() => setWaitlistOpen(true)} />
