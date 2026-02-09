@@ -6,7 +6,7 @@ const nodes = [{
   label: "Share Register",
   icon: FileSpreadsheet,
   x: 150,
-  y: -10
+  y: 5
 }, {
   id: 1,
   label: "Reporting",
