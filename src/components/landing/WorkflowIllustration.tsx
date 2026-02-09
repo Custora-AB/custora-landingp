@@ -29,6 +29,22 @@ export function WorkflowIllustration({ animate }: { animate: boolean }) {
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
+        {/* Center hub glow */}
+        <defs>
+          <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <motion.circle
+          cx="180"
+          cy="130"
+          r="60"
+          fill="url(#hub-glow)"
+          initial={{ opacity: 0 }}
+          animate={animate ? { opacity: [0, 1, 0.5, 1] } : {}}
+          transition={{ duration: 3, delay: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        />
         {connections.map((conn, i) => {
           const from = getNodeCenter(nodes[conn[0]]);
           const to = getNodeCenter(nodes[conn[1]]);
