@@ -46,9 +46,9 @@ export function ModulesGrid() {
     <section className="py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="max-w-2xl mx-auto text-center mb-14">
-          <h2 className="mb-4">Built for ownership management</h2>
+          <h2 className="mb-4">The solution</h2>
           <p className="text-muted-foreground">
-            Purpose-built modules that work together. Start with what you need.
+            Custora is a system of record for ownership and governance. Purpose-built modules that work together.
           </p>
         </ScrollReveal>
 
