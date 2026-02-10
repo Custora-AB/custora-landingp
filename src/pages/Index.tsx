@@ -11,7 +11,7 @@ const Index = () => {
   const [pilotOpen, setPilotOpen] = useState(false);
 
   return (
-    <div className="h-screen flex flex-col bg-background overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-background overflow-y-auto">
       <Navigation onWaitlistClick={() => setWaitlistOpen(true)} onPilotClick={() => setPilotOpen(true)} />
       <div className="flex-1">
         <Hero onWaitlistClick={() => setWaitlistOpen(true)} onPilotClick={() => setPilotOpen(true)} />
