@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { TypewriterText } from "@/components/landing/TypewriterText";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { modules, ModuleDialog, type ModuleInfo } from "@/components/landing/ModuleDialog";
 import { WorkflowIllustration } from "@/components/landing/WorkflowIllustration";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroProps {
   onWaitlistClick: () => void;
@@ -14,6 +15,10 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
   const [headlineDone, setHeadlineDone] = useState(false);
   const [subDone, setSubDone] = useState(false);
   const [activeModule, setActiveModule] = useState<ModuleInfo | null>(null);
+  const isMobile = useIsMobile();
+  const illustrationRef = useRef<HTMLDivElement>(null);
+  const illustrationInView = useInView(illustrationRef, { once: true, amount: 0.3 });
+  const shouldAnimateIllustration = isMobile ? illustrationInView : subDone;
 
   return (
     <>
@@ -97,8 +102,8 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
               </motion.div>
             </div>
 
-            <div className="flex items-center justify-center">
-              <WorkflowIllustration animate={subDone} />
+            <div ref={illustrationRef} className="flex items-center justify-center">
+              <WorkflowIllustration animate={shouldAnimateIllustration} />
             </div>
           </div>
         </div>
