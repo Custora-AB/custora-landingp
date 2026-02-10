@@ -16,9 +16,53 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqedeznw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          type: "pilot-request",
+          company,
+          fullName,
+          email,
+          phone,
+          _subject: "New pilot customer request",
+          _replyto: email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Something went wrong. Please try again.");
+      }
+
+      setIsSubmitted(true);
+
+      // Optional: clear fields
+      setCompany("");
+      setFullName("");
+      setEmail("");
+      setPhone("");
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Unexpected error, please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -110,9 +154,13 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
                     variant="default"
                     size="lg"
                     className="w-full mt-2"
+                    disabled={isLoading}
                   >
-                    Request pilot access
+                    {isLoading ? "Submitting..." : "Request pilot access"}
                   </Button>
+                  {error && (
+                    <p className="text-xs text-red-500 pt-1 text-center">{error}</p>
+                  )}
                   <p className="text-xs text-muted-foreground pt-1 text-center">
                     We respect your privacy. GDPR-compliant.
                   </p>
