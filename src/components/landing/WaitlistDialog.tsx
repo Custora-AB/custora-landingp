@@ -21,9 +21,57 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
   const [waitlist, setWaitlist] = useState(true);
   const [newsletter, setNewsletter] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqedeznw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          company,
+          fullName,
+          email,
+          phone,
+          role,
+          waitlist,
+          newsletter,
+          _subject: "New waitlist signup",
+          _replyto: email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Something went wrong. Please try again.");
+      }
+
+      setIsSubmitted(true);
+
+      // Optional: clear the form
+      setCompany("");
+      setFullName("");
+      setEmail("");
+      setPhone("");
+      setRole("");
+      setWaitlist(true);
+      setNewsletter(false);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Unexpected error, please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -141,9 +189,17 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
                     </div>
                   </div>
 
-                  <Button variant="hero" size="lg" className="w-full mt-2">
-                    Join waitlist
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    className="w-full mt-2"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Submitting..." : "Join waitlist"}
                   </Button>
+                  {error && (
+                    <p className="text-xs text-red-500 pt-1 text-center">{error}</p>
+                  )}
                   <p className="text-xs text-muted-foreground pt-1 text-center">
                     We respect your privacy. Unsubscribe anytime. GDPR-compliant.
                   </p>
