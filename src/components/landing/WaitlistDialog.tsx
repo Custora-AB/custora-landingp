@@ -23,37 +23,42 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setSuccessMessage(null);
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mqedeznw", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify({
-          company,
-          fullName,
+          name: fullName,
           email,
-          phone,
-          role,
-          waitlist,
-          newsletter,
-          _subject: "New waitlist signup",
-          _replyto: email,
+          message: `Waitlist signup from ${fullName}${
+            company ? ` at ${company}` : ""
+          }.
+
+Phone: ${phone || "N/A"}
+Role: ${role || "N/A"}
+Join waitlist: ${waitlist ? "Yes" : "No"}
+Subscribe to product updates: ${newsletter ? "Yes" : "No"}`,
         }),
       });
 
-      if (!response.ok) {
-        throw new Error("Something went wrong. Please try again.");
+      const data = (await response.json()) as { ok: boolean; error?: string };
+
+      if (!response.ok || !data.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
       }
 
       setIsSubmitted(true);
+      setSuccessMessage("Thanks! You're on the waitlist.");
 
       // Optional: clear the form
       setCompany("");
@@ -190,6 +195,7 @@ export function WaitlistDialog({ open, onClose }: WaitlistDialogProps) {
                   </div>
 
                   <Button
+                    type="submit"
                     variant="hero"
                     size="lg"
                     className="w-full mt-2"
