@@ -18,36 +18,38 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     setError(null);
+    setSuccessMessage(null);
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mqedeznw", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify({
-          type: "pilot-request",
-          company,
-          fullName,
+          name: fullName,
           email,
-          phone,
-          _subject: "New pilot customer request",
-          _replyto: email,
+          message: `Pilot request from ${fullName} at ${company}.
+
+Phone: ${phone || "N/A"}`,
         }),
       });
 
-      if (!response.ok) {
-        throw new Error("Something went wrong. Please try again.");
+      const data = (await response.json()) as { ok: boolean; error?: string };
+
+      if (!response.ok || !data.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
       }
 
       setIsSubmitted(true);
+      setSuccessMessage("Thanks! We've received your pilot request.");
 
       // Optional: clear fields
       setCompany("");
@@ -94,7 +96,9 @@ export function PilotDialog({ open, onClose }: PilotDialogProps) {
               <div className="space-y-4 text-center py-4">
                 <CheckCircle className="w-10 h-10 text-accent mx-auto" />
                 <h3 className="text-xl font-semibold text-foreground">Pilot request received</h3>
-                <p className="text-sm text-muted-foreground">We'll reach out shortly to discuss next steps.</p>
+                <p className="text-sm text-muted-foreground">
+                  {successMessage || "We'll reach out shortly to discuss next steps."}
+                </p>
                 <Button variant="default" size="sm" onClick={onClose} className="mt-2">
                   Close
                 </Button>
