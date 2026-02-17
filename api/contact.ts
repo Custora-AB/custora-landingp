@@ -42,7 +42,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       from: "Custora <onboarding@resend.dev>",
       // Configure this in your Vercel project settings
       to: process.env.RESEND_CONTACT_RECIPIENT,
-      reply_to: email,
+      replyTo: email,
       subject: "New contact form submission",
       text: [
         `Name: ${name}`,
@@ -63,7 +63,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ ok: true });
   } catch (err) {
     const errorMessage =
-      err instanceof Error ? err.message : "Unexpected error while sending email";
+      err instanceof Error ? err.message : "Unexpected error while sending email!";
 
     return res.status(500).json({ ok: false, error: errorMessage });
   }
