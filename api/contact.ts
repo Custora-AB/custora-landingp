@@ -39,7 +39,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     
     const { error } = await resend.emails.send({
-      from: "Custora <onboarding@resend.dev>",
+      from: "Custora <noreply@custora.se>",
       to: process.env.RESEND_CONTACT_RECIPIENT,
       replyTo: email,
       subject: "New contact form submission",
