@@ -7,11 +7,10 @@ import { WorkflowIllustration } from "@/components/landing/WorkflowIllustration"
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroProps {
-  onWaitlistClick: () => void;
   onPilotClick: () => void;
 }
 
-export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
+export function Hero({ onPilotClick }: HeroProps) {
   const [headlineDone, setHeadlineDone] = useState(false);
   const [subDone, setSubDone] = useState(false);
   const [activeModule, setActiveModule] = useState<ModuleInfo | null>(null);
@@ -53,7 +52,6 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
                 transition={{ duration: 0.3 }}
               >
                 <div className="mb-6 relative bg-primary rounded-2xl p-5">
-                  <div className="absolute left-10 top-8 bottom-8 w-px bg-primary-foreground/20" />
                   <div className="space-y-0">
                     {modules.map((m, i) => (
                       <motion.button
@@ -94,9 +92,6 @@ export function Hero({ onWaitlistClick, onPilotClick }: HeroProps) {
                     className="shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     Become pilot customer
-                  </Button>
-                  <Button variant="hero" size="lg" onClick={onWaitlistClick}>
-                    Join waitlist
                   </Button>
                 </motion.div>
               </motion.div>

@@ -2,13 +2,12 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 interface NavigationProps {
-  onWaitlistClick: () => void;
   onPilotClick: () => void;
 }
 
-export function Navigation({ onWaitlistClick, onPilotClick }: NavigationProps) {
+export function Navigation({ onPilotClick }: NavigationProps) {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/40">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-3 py-3 sm:h-16 sm:gap-4">
           <a href="/" className="flex items-center gap-2 shrink-0">
@@ -20,12 +19,17 @@ export function Navigation({ onWaitlistClick, onPilotClick }: NavigationProps) {
               variant="default"
               size="sm"
               onClick={onPilotClick}
-              className="hidden sm:inline-flex"
+              className="hidden sm:inline-flex bg-white text-black border border-border hover:bg-white/90"
             >
               Become pilot customer
             </Button>
-            <Button variant="hero" size="sm" onClick={onWaitlistClick}>
-              Join waitlist
+            <Button
+              variant="default"
+              size="sm"
+              asChild
+              className="bg-black text-white hover:bg-black/90"
+            >
+              <a href="https://app.custora.se">Sign in</a>
             </Button>
           </div>
         </div>

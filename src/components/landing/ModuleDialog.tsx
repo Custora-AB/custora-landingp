@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { X, FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-react";
+import { X,FileSpreadsheet, ClipboardCheck, UserCheck, FolderLock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface ModuleInfo {
@@ -13,9 +12,9 @@ export const modules: ModuleInfo[] = [
   {
     icon: FileSpreadsheet,
     title: "Share register & cap table",
-    tagline: "Accurate, up-to-date ownership structure per entity.",
+    tagline: "Accurate, current ownership structure per entity.",
     details: [
-      "Multi-entity support (holding + subsidiaries)",
+      "Support for multiple entities (holding + subsidiaries)",
       "Ordinary shares, preference shares, and options with vesting",
       "Corporate actions: issuance, transfer, split, redemption",
       "Automatic cap table with full dilution view",
@@ -27,10 +26,10 @@ export const modules: ModuleInfo[] = [
     title: "Regulatory reporting",
     tagline: "Structured data collection for financial authority filings.",
     details: [
-      "Pre-defined forms based on FI requirements",
+      "Predefined forms based on FI requirements",
       "AIF reporting, ownership structure, managed capital",
-      "Draft versioning and period-based history",
-      "Export-ready in PDF and Excel",
+      "Draft versioning and history by period",
+      "Ready to export in PDF and Excel",
     ],
   },
   {
@@ -38,10 +37,10 @@ export const modules: ModuleInfo[] = [
     title: "KYC collection",
     tagline: "Structured investor verification with manual approval.",
     details: [
-      "Step-by-step flow: identity, ownership, PEP/AML",
+      "Guided flow: identity, ownership, PEP/AML",
       "Document upload (ID, corporate docs)",
       "Status tracking: pending, in progress, approved, rejected",
-      "Admin-controlled approval workflow",
+      "Approval workflow controlled by admins",
     ],
   },
   {
@@ -50,9 +49,9 @@ export const modules: ModuleInfo[] = [
     tagline: "Controlled document sharing per company and investor.",
     details: [
       "Folder structure: reports, agreements, presentations",
-      "Role-based access (investor / admin) per entity",
+      "Access by role (investor / admin) per entity",
       "Version history with latest version visible",
-      "Download-only — no editing",
+      "Download only, no editing",
     ],
   },
 ];
@@ -79,30 +78,27 @@ export function ModuleDialog({ module, onClose }: ModuleDialogProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="relative z-10 w-full max-w-md mx-4 rounded-2xl shadow-xl overflow-hidden"
-            style={{
-              background: "linear-gradient(to right, hsl(var(--primary)), hsl(220, 80%, 35%), hsl(225, 100%, 57%))",
-            }}
+            className="relative z-10 w-full max-w-md mx-4 rounded-2xl overflow-hidden border border-border shadow-xl bg-white"
           >
             <div className="p-7">
               <button
                 onClick={onClose}
-                className="absolute top-5 right-5 text-white/60 hover:text-white transition-colors"
+                className="absolute top-5 right-5 text-black/40 hover:text-black transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-4">
-                <module.icon className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-xl bg-black/5 flex items-center justify-center mb-4">
+                <module.icon className="w-6 h-6 text-black" />
               </div>
 
-              <h3 className="text-lg font-semibold text-white mb-1">{module.title}</h3>
-              <p className="text-sm text-white/70 mb-5">{module.tagline}</p>
+              <h3 className="text-lg font-semibold text-black mb-1">{module.title}</h3>
+              <p className="text-sm text-black/60 mb-5">{module.tagline}</p>
 
               <ul className="space-y-2.5">
                 {module.details.map((d) => (
-                  <li key={d} className="flex items-start gap-2.5 text-sm text-white/80">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/50 shrink-0 mt-1.5" />
+                  <li key={d} className="flex items-start gap-2.5 text-sm text-black/80">
+                    <span className="w-1.5 h-1.5 rounded-full bg-black/30 shrink-0 mt-1.5" />
                     {d}
                   </li>
                 ))}

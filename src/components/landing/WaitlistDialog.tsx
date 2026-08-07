@@ -207,7 +207,7 @@ Subscribe to product updates: ${newsletter ? "Yes" : "No"}`,
                     <p className="text-xs text-red-500 pt-1 text-center">{error}</p>
                   )}
                   <p className="text-xs text-muted-foreground pt-1 text-center">
-                    We respect your privacy. Unsubscribe anytime. GDPR-compliant.
+                    We respect your privacy. Unsubscribe anytime. GDPR compliant.
                   </p>
                 </form>
               </>

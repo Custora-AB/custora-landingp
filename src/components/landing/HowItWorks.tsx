@@ -3,7 +3,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scr
 const steps = [
   { number: "01", text: "Import your shareholder data or start fresh." },
   { number: "02", text: "Record corporate actions and governance events." },
-  { number: "03", text: "Export audit-ready reports and share with stakeholders." },
+  { number: "03", text: "Export reports ready for audit and share with stakeholders." },
 ];
 
 export function HowItWorks() {

@@ -157,7 +157,7 @@ Phone: ${phone || "N/A"}`,
                     type="submit"
                     variant="default"
                     size="lg"
-                    className="w-full mt-2"
+                    className="w-full mt-2 bg-black text-white hover:bg-black/90"
                     disabled={isLoading}
                   >
                     {isLoading ? "Submitting..." : "Request pilot access"}
@@ -166,7 +166,7 @@ Phone: ${phone || "N/A"}`,
                     <p className="text-xs text-red-500 pt-1 text-center">{error}</p>
                   )}
                   <p className="text-xs text-muted-foreground pt-1 text-center">
-                    We respect your privacy. GDPR-compliant.
+                    We respect your privacy. GDPR compliant.
                   </p>
                 </form>
               </>

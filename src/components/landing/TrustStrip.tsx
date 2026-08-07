@@ -1,8 +1,8 @@
 import { Shield, FileText, Lock } from "lucide-react";
 
 const items = [
-  { icon: Shield, label: "GDPR-ready" },
-  { icon: Lock, label: "Role-based access" },
+  { icon: Shield, label: "GDPR ready" },
+  { icon: Lock, label: "Access by role" },
   { icon: FileText, label: "Complete audit log" },
 ];
 

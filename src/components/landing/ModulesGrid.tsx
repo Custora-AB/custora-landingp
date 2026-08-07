@@ -11,13 +11,13 @@ const modules = [
     icon: FileSpreadsheet,
     title: "Share register & cap table",
     description:
-      "Multi-entity ownership structure with support for ordinary shares, preference shares, and options. Automatic cap table with full dilution view.",
+      "Ownership structure across multiple entities, with support for ordinary shares, preference shares, and options. Automatic cap table with full dilution view.",
   },
   {
     icon: ClipboardCheck,
     title: "Regulatory reporting",
     description:
-      "Structured forms for financial authority reporting — AIF data, ownership structures, and managed capital. Draft versioning and export-ready.",
+      "Structured forms for financial authority reporting: AIF data, ownership structures, and managed capital. Draft versioning and ready to export.",
   },
   {
     icon: UserCheck,
@@ -29,7 +29,7 @@ const modules = [
     icon: FolderLock,
     title: "Investor data room",
     description:
-      "Controlled document library per company. Role-based access, version history, and download-only sharing for reports, agreements, and presentations.",
+      "Controlled document library per company. Access by role, version history, and download only sharing for reports, agreements, and presentations.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function ModulesGrid() {
         <ScrollReveal className="max-w-2xl mx-auto text-center mb-14">
           <h2 className="mb-4">Core modules</h2>
           <p className="text-muted-foreground">
-            Four purpose-built modules that cover the full ownership lifecycle — from register to compliance.
+            Four dedicated modules that cover the full ownership lifecycle, from register to compliance.
           </p>
         </ScrollReveal>
 

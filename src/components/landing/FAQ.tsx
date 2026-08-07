@@ -11,19 +11,19 @@ import { useRef } from "react";
 const faqs = [
   {
     question: "What types of companies can use Custora?",
-    answer: "Custora is designed for private (unlisted) European companies, including startups, growth companies, holding structures, family offices, and PE-backed businesses. We support companies across all EU jurisdictions with multi-entity and group structures.",
+    answer: "Custora is designed for private (unlisted) European companies, including startups, growth companies, holding structures, family offices, and businesses backed by private equity. We support companies across all EU jurisdictions with multiple entities and group structures.",
   },
   {
     question: "How is Custora different from spreadsheets or traditional cap table tools?",
-    answer: "Unlike spreadsheets, Custora provides a connected system where changes automatically flow across your cap table, documents, and stakeholder communications. Unlike US-focused tools, we're built specifically for European legal frameworks, terminology, and compliance requirements.",
+    answer: "Unlike spreadsheets, Custora provides a connected system where changes automatically flow across your cap table, documents, and stakeholder communications. Unlike tools focused on the US, we're built specifically for European legal frameworks, terminology, and compliance requirements.",
   },
   {
     question: "Can I import my existing shareholder data?",
     answer: "Yes. We offer structured data import from spreadsheets and can assist with migrating data from other systems. Our onboarding team ensures your historical records are accurately captured and verified before go-live.",
   },
   {
-    question: "Is my data secure and GDPR-compliant?",
-    answer: "Absolutely. Custora is built with European data protection at its core. Data is encrypted at rest and in transit, hosted in EU data centres, and we maintain comprehensive audit logs. We're fully GDPR-compliant and can support your data processing agreements.",
+    question: "Is my data secure and GDPR compliant?",
+    answer: "Absolutely. Custora is built with European data protection at its core. Data is encrypted at rest and in transit, hosted in EU data centres, and we maintain comprehensive audit logs. We're fully GDPR compliant and can support your data processing agreements.",
   },
   {
     question: "What support do you offer during onboarding?",

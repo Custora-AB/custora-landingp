@@ -8,11 +8,11 @@ const items = [
   },
   {
     problem: "Regulatory complexity increasing across European jurisdictions",
-    solution: "Built-in compliance workflows and audit-ready exports",
+    solution: "Compliance workflows built in, with exports ready for audit",
   },
   {
     problem: "Stakeholders lack visibility into their holdings and decisions",
-    solution: "Secure portals with role-based access for investors and boards",
+    solution: "Secure portals with access by role for investors and boards",
   },
 ];
 
