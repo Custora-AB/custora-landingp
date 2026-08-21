@@ -51,17 +51,15 @@ export function Benefits() {
         >
           {useCases.map((u) => (
             <StaggerItem key={u.label} className="h-full">
-              <div className="flex h-full flex-col border border-border bg-card p-6 sm:aspect-square">
-                <u.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
+              <div className="flex h-full flex-col border border-border bg-card p-7">
+                <u.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
 
-                <div className="mt-auto pt-8">
-                  <h3 className="text-base font-medium leading-snug text-black">
-                    {u.label}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {u.text}
-                  </p>
-                </div>
+                <h3 className="mt-10 text-2xl font-normal leading-snug tracking-tight text-black">
+                  {u.label}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {u.text}
+                </p>
               </div>
             </StaggerItem>
           ))}
