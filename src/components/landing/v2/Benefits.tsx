@@ -26,7 +26,7 @@ const useCases = [
 
 export function Benefits() {
   return (
-    <section className="relative border-t border-border py-20 lg:py-28">
+    <section className="relative py-20 lg:py-28">
       <div className="relative mx-auto w-full max-w-[1600px] px-6 sm:px-10 lg:px-14">
         <ScrollReveal>
           <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-10">
