@@ -74,9 +74,9 @@ export function WaitlistForm() {
         </button>
       </form>
 
-      <p className="mt-3 text-center text-sm text-muted-foreground">
-        {error ?? "No commitment. Private until you decide otherwise."}
-      </p>
+      {error && (
+        <p className="mt-3 text-center text-sm text-destructive">{error}</p>
+      )}
     </div>
   );
 }
