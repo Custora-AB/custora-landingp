@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Check, Loader2 } from "lucide-react";
 
-export function WaitlistForm() {
+interface WaitlistFormProps {
+  /** Centres the field and drops the hero's left-edge text alignment offset. */
+  centered?: boolean;
+}
+
+export function WaitlistForm({ centered = false }: WaitlistFormProps) {
+  const inputId = useId();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
   const [error, setError] = useState<string | null>(null);
@@ -37,8 +43,8 @@ export function WaitlistForm() {
 
   if (status === "done") {
     return (
-      <div className="max-w-lg">
-        <div className="flex items-center gap-3 rounded-full bg-white p-2 pl-6 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 lg:-ml-6">
+      <div className={centered ? "mx-auto max-w-lg" : "max-w-lg"}>
+        <div className={`flex items-center gap-3 rounded-full bg-white p-2 pl-6 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5${centered ? "" : " lg:-ml-6"}`}>
           <Check className="h-5 w-5 shrink-0 text-black" />
           <p className="py-3 text-base text-black">You're on the list — we'll be in touch.</p>
         </div>
@@ -47,16 +53,16 @@ export function WaitlistForm() {
   }
 
   return (
-    <div className="max-w-lg">
+    <div className={centered ? "mx-auto max-w-lg" : "max-w-lg"}>
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 focus-within:ring-black/20 lg:-ml-6"
+        className={`flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 focus-within:ring-black/20${centered ? "" : " lg:-ml-6"}`}
       >
-        <label htmlFor="waitlist-email" className="sr-only">
+        <label htmlFor={inputId} className="sr-only">
           Email address
         </label>
         <input
-          id="waitlist-email"
+          id={inputId}
           type="email"
           required
           value={email}
