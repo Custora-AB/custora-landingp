@@ -49,7 +49,7 @@ export function Benefits() {
           {/* Runs behind the row; the opaque cards mask it, so it only shows in the gaps */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-[2.5rem] z-0 hidden h-0.5 bg-accent lg:block"
+            className="pointer-events-none absolute inset-x-0 top-1/2 z-0 hidden h-0.5 -translate-y-1/2 bg-accent lg:block"
           />
 
           <StaggerContainer
