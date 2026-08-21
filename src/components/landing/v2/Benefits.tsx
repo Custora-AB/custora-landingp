@@ -20,7 +20,7 @@ const useCases = [
   {
     icon: FolderLock,
     label: "Investor data room",
-    text: "A safe place to share documents with investors. Everyone sees only the files meant for them, and always the newest version.",
+    text: "A safe place to share documents with investors.",
   },
 ];
 
