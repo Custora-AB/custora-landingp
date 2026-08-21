@@ -31,9 +31,11 @@ export function Benefits() {
         <ScrollReveal>
           <div className="grid gap-6 lg:grid-cols-12 lg:items-center lg:gap-10">
             <h2 className="font-sans text-[clamp(1.75rem,4vw,3.25rem)] font-medium leading-[1.05] tracking-[-0.03em] text-black lg:col-span-6">
-              Tailored solutions for efficiency
+              Tailored solutions for
               <br />
-              in ownership and compliance
+              efficiency in ownership
+              <br />
+              and compliance
             </h2>
 
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
