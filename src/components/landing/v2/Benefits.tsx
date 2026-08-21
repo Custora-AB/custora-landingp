@@ -47,7 +47,7 @@ export function Benefits() {
 
         <div className="relative mt-16 lg:mt-20">
           <ScrollReveal>
-            <div className="mb-8 flex items-center gap-3.5 pl-2">
+            <div className="mb-8 flex items-center gap-3.5 pl-1">
               <span className="h-4 w-4 shrink-0 bg-accent" />
               <span className="font-mono text-base font-semibold uppercase leading-none tracking-[0.22em] text-black">
                 Solutions
