@@ -33,7 +33,7 @@ export function Benefits() {
             <h2 className="font-sans text-[clamp(1.75rem,4vw,3.25rem)] font-medium leading-[1.05] tracking-[-0.03em] text-black lg:col-span-6">
               Tailored solutions for efficiency
               <br />
-              in financial operations
+              in ownership and compliance
             </h2>
 
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
