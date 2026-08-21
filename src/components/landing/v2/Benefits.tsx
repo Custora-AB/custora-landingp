@@ -5,7 +5,7 @@ const useCases = [
   {
     icon: FileSpreadsheet,
     label: "Share register & cap table",
-    text: "Keep track of who owns what, across every company in your group. The cap table updates itself whenever shares are issued, sold, or split.",
+    text: "Keep track of who owns what, across every company in your group.",
   },
   {
     icon: ClipboardCheck,
