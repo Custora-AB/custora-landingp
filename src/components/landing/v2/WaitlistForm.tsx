@@ -38,7 +38,7 @@ export function WaitlistForm() {
   if (status === "done") {
     return (
       <div className="max-w-lg">
-        <div className="flex items-center gap-3 rounded-full bg-white p-2 pl-6 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5">
+        <div className="flex items-center gap-3 rounded-full bg-white p-2 pl-6 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 lg:-ml-6">
           <Check className="h-5 w-5 shrink-0 text-black" />
           <p className="py-3 text-base text-black">You're on the list — we'll be in touch.</p>
         </div>
@@ -50,7 +50,7 @@ export function WaitlistForm() {
     <div className="max-w-lg">
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 focus-within:ring-black/20"
+        className="flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_8px_30px_rgba(5,28,44,0.08)] ring-1 ring-black/5 focus-within:ring-black/20 lg:-ml-6"
       >
         <label htmlFor="waitlist-email" className="sr-only">
           Email address
