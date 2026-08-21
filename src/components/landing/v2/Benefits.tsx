@@ -35,7 +35,7 @@ export function Benefits() {
               <br />
               efficiency in ownership
               <br />
-              and compliance
+              and compliance.
             </h2>
 
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
