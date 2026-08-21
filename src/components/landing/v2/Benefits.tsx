@@ -11,25 +11,13 @@ const useCases = [
 export function Benefits() {
   return (
     <section className="relative border-t border-border py-20 lg:py-28">
-      {/* Faint column rules, echoing the grid the hero sits on */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 hidden lg:block">
-        <div className="mx-auto flex h-full max-w-[1600px] px-6 sm:px-10 lg:px-14">
-          <div className="grid w-full grid-cols-4">
-            <div className="border-l border-border/60" />
-            <div className="border-l border-border/60" />
-            <div className="border-l border-border/60" />
-            <div className="border-x border-border/60" />
-          </div>
-        </div>
-      </div>
-
       <div className="relative mx-auto w-full max-w-[1600px] px-6 sm:px-10 lg:px-14">
         <ScrollReveal>
           <div className="grid gap-6 lg:grid-cols-12 lg:items-center lg:gap-10">
             <h2 className="font-sans text-[clamp(1.75rem,4vw,3.25rem)] font-medium leading-[1.05] tracking-[-0.03em] text-black lg:col-span-6">
-              Why asset managers
+              Tailored solutions for efficiency
               <br />
-              choose Custora
+              in financial operations
             </h2>
 
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
