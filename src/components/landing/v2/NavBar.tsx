@@ -34,7 +34,7 @@ export function NavBar() {
 
         <a
           href="https://app.custora.se"
-          className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-black/85 sm:text-base"
+          className="border border-border bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-secondary sm:text-base"
         >
           Log In
         </a>
