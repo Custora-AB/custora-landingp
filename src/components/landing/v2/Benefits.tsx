@@ -45,25 +45,33 @@ export function Benefits() {
           </div>
         </ScrollReveal>
 
-        <StaggerContainer
-          className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4"
-          staggerDelay={0.08}
-        >
-          {useCases.map((u) => (
-            <StaggerItem key={u.label} className="h-full">
-              <div className="flex h-full flex-col border border-border bg-card p-7">
-                <u.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
+        <div className="relative mt-16 lg:mt-20">
+          {/* Runs behind the row; the opaque cards mask it, so it only shows in the gaps */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-[2.5rem] z-0 hidden h-0.5 bg-accent lg:block"
+          />
 
-                <h3 className="mt-10 text-2xl font-normal leading-snug tracking-tight text-black">
-                  {u.label}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                  {u.text}
-                </p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+          <StaggerContainer
+            className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            staggerDelay={0.08}
+          >
+            {useCases.map((u) => (
+              <StaggerItem key={u.label} className="h-full">
+                <div className="flex h-full flex-col border border-border bg-card p-7">
+                  <u.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
+
+                  <h3 className="mt-10 text-2xl font-normal leading-snug tracking-tight text-black">
+                    {u.label}
+                  </h3>
+                  <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                    {u.text}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );
