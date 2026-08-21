@@ -46,12 +46,6 @@ export function Benefits() {
         </ScrollReveal>
 
         <div className="relative mt-16 lg:mt-20">
-          {/* Runs behind the row; the opaque cards mask it, so it only shows in the gaps */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-1/2 z-0 hidden h-0.5 -translate-y-1/2 bg-accent lg:block"
-          />
-
           <StaggerContainer
             className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
             staggerDelay={0.08}
