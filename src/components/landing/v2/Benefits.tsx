@@ -46,6 +46,15 @@ export function Benefits() {
         </ScrollReveal>
 
         <div className="relative mt-16 lg:mt-20">
+          <ScrollReveal>
+            <div className="mb-8 flex items-center gap-3">
+              <span className="h-3 w-3 bg-navy" />
+              <span className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-navy">
+                Solutions
+              </span>
+            </div>
+          </ScrollReveal>
+
           <StaggerContainer
             className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
             staggerDelay={0.08}
