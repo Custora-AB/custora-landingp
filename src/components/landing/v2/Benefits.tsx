@@ -10,7 +10,7 @@ const useCases = [
   {
     icon: ClipboardCheck,
     label: "Regulatory reporting",
-    text: "The reports the authorities ask for, on forms that are already set up for you. Save drafts as you go, then export when it is due.",
+    text: "The reports the authorities ask for, on forms that are already set up for you.",
   },
   {
     icon: UserCheck,
