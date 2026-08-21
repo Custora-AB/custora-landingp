@@ -13,7 +13,7 @@ export function NavBar() {
             decoding="async"
             className="h-8 w-8 object-contain sm:h-9 sm:w-9"
           />
-          <span className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+          <span className="text-xl font-semibold tracking-tight text-black sm:text-2xl">
             Custora
           </span>
         </a>
