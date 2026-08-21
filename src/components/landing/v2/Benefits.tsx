@@ -1,4 +1,12 @@
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ClipboardCheck, FileSpreadsheet, FolderLock, UserCheck } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
+
+const useCases = [
+  { icon: FileSpreadsheet, label: "Share register & cap table" },
+  { icon: ClipboardCheck, label: "Regulatory reporting" },
+  { icon: UserCheck, label: "KYC collection" },
+  { icon: FolderLock, label: "Investor data room" },
+];
 
 export function Benefits() {
   return (
@@ -35,6 +43,28 @@ export function Benefits() {
             </p>
           </div>
         </ScrollReveal>
+
+        <div className="mt-16 border-t border-border pt-10 lg:mt-20 lg:pt-12">
+          <ScrollReveal>
+            <div className="mb-7 flex items-center gap-3">
+              <span className="h-2.5 w-2.5 bg-accent" />
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+                Use cases
+              </span>
+            </div>
+          </ScrollReveal>
+
+          <StaggerContainer className="flex flex-wrap gap-3" staggerDelay={0.08}>
+            {useCases.map((u) => (
+              <StaggerItem key={u.label}>
+                <span className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium text-black">
+                  <u.icon className="h-4 w-4 text-accent" />
+                  {u.label}
+                </span>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );
