@@ -8,12 +8,12 @@ export function NavBar() {
           <img
             src={logo}
             alt="Custora"
-            width={48}
-            height={48}
+            width={36}
+            height={36}
             decoding="async"
-            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            className="h-8 w-8 object-contain sm:h-9 sm:w-9"
           />
-          <span className="text-2xl font-semibold tracking-tight text-foreground sm:text-[1.75rem]">
+          <span className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
             Custora
           </span>
         </a>
