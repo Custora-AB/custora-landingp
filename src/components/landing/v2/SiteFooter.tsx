@@ -22,12 +22,7 @@ export function SiteFooter() {
           © {new Date().getFullYear()} Custora. All rights reserved.
         </p>
 
-        <a
-          href="mailto:hello@custora.se"
-          className="text-sm text-muted-foreground transition-colors hover:text-black sm:text-right"
-        >
-          hello@custora.se
-        </a>
+        <span aria-hidden className="hidden sm:block" />
       </div>
     </footer>
   );
