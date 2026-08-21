@@ -15,7 +15,7 @@ const useCases = [
   {
     icon: UserCheck,
     label: "KYC collection",
-    text: "Collect the documents and details you need on every investor in one guided flow. You decide who gets approved.",
+    text: "Collect the documents and details you need on every investor in one guided flow.",
   },
   {
     icon: FolderLock,
