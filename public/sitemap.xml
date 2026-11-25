@@ -2,254 +2,476 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.custora.se/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/"/>
   </url>
   <url>
     <loc>https://www.custora.se/en</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/"/>
   </url>
   <url>
     <loc>https://www.custora.se/guider</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider"/>
   </url>
   <url>
     <loc>https://www.custora.se/kontakt</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/kontakt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/kontakt"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/contact</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/kontakt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/kontakt"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/guides</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider"/>
   </url>
   <url>
     <loc>https://www.custora.se/guider/aifmd-rapportering</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/aifmd-reporting-sweden"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering"/>
   </url>
   <url>
     <loc>https://www.custora.se/guider/aktiebok-krav</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aktiebok-krav"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/share-register-requirements"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aktiebok-krav"/>
   </url>
   <url>
     <loc>https://www.custora.se/guider/nyemission-steg-for-steg</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/nyemission-steg-for-steg"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/new-share-issue-sweden"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/nyemission-steg-for-steg"/>
   </url>
   <url>
     <loc>https://www.custora.se/guider/ordlista</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/glossary"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista"/>
   </url>
   <url>
     <loc>https://www.custora.se/losningar/advokat-och-redovisningsbyraer</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/advokat-och-redovisningsbyraer"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/law-and-accounting-firms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/advokat-och-redovisningsbyraer"/>
   </url>
   <url>
     <loc>https://www.custora.se/losningar/aif-forvaltare</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/aif-forvaltare"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/fund-managers"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/aif-forvaltare"/>
   </url>
   <url>
     <loc>https://www.custora.se/losningar/fastighetskoncerner</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/fastighetskoncerner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/real-estate-groups"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/fastighetskoncerner"/>
   </url>
   <url>
     <loc>https://www.custora.se/produkt/digital-aktiebok</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/digital-aktiebok"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/share-register"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/digital-aktiebok"/>
   </url>
   <url>
+    <loc>https://www.custora.se/produkt/investerarrum</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/investerarrum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/investor-room"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/investerarrum"/>
+  </url>
+  <url>
     <loc>https://www.custora.se/produkt/kapitalaktivitet</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalaktivitet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-activity"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalaktivitet"/>
   </url>
   <url>
     <loc>https://www.custora.se/produkt/koncernstruktur</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/koncernstruktur"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/group-structure"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/koncernstruktur"/>
   </url>
   <url>
+    <loc>https://www.custora.se/produkt/kyc</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kyc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/kyc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kyc"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/produkt/rapportering</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/rapportering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/reporting"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/rapportering"/>
+  </url>
+  <url>
     <loc>https://www.custora.se/produkt/signering-med-bankid</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/signering-med-bankid"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/bankid-signing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/signering-med-bankid"/>
   </url>
   <url>
     <loc>https://www.custora.se/produkt/styrelse-och-protokoll</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/styrelse-och-protokoll"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/board-and-minutes"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/styrelse-och-protokoll"/>
   </url>
   <url>
     <loc>https://www.custora.se/roller/cfo-och-ekonomiteam</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/cfo-och-ekonomiteam"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/cfo-and-finance-team"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/cfo-och-ekonomiteam"/>
   </url>
   <url>
     <loc>https://www.custora.se/roller/investerare</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/investerare"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/investors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/investerare"/>
   </url>
   <url>
     <loc>https://www.custora.se/roller/styrelse</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/styrelse"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/board-members"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/styrelse"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/guides/aifmd-reporting-sweden</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/aifmd-reporting-sweden"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/guides/glossary</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/glossary"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/guides/new-share-issue-sweden</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/nyemission-steg-for-steg"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/new-share-issue-sweden"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/nyemission-steg-for-steg"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/guides/share-register-requirements</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aktiebok-krav"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/guides/share-register-requirements"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aktiebok-krav"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/product/bankid-signing</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/signering-med-bankid"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/bankid-signing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/signering-med-bankid"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/product/board-and-minutes</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/styrelse-och-protokoll"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/board-and-minutes"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/styrelse-och-protokoll"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/product/capital-activity</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalaktivitet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-activity"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalaktivitet"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/product/group-structure</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/koncernstruktur"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/group-structure"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/koncernstruktur"/>
   </url>
   <url>
+    <loc>https://www.custora.se/en/product/investor-room</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/investerarrum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/investor-room"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/investerarrum"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/en/product/kyc</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kyc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/kyc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kyc"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/en/product/reporting</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/rapportering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/reporting"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/rapportering"/>
+  </url>
+  <url>
     <loc>https://www.custora.se/en/product/share-register</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/digital-aktiebok"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/share-register"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/digital-aktiebok"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/roles/board-members</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/styrelse"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/board-members"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/styrelse"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/roles/cfo-and-finance-team</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/cfo-och-ekonomiteam"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/cfo-and-finance-team"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/cfo-och-ekonomiteam"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/roles/investors</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/roller/investerare"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/roles/investors"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/roller/investerare"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/solutions/fund-managers</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/aif-forvaltare"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/fund-managers"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/aif-forvaltare"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/solutions/law-and-accounting-firms</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/advokat-och-redovisningsbyraer"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/law-and-accounting-firms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/advokat-och-redovisningsbyraer"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/solutions/real-estate-groups</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/losningar/fastighetskoncerner"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/solutions/real-estate-groups"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/losningar/fastighetskoncerner"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/aifmd-ii</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/aifmd-ii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/aifmd-ii"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/auktoriserade-forvaltare</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/auktoriserade-forvaltare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/auktoriserade-forvaltare"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/deadlines-och-rapportfrekvens</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/deadlines-och-rapportfrekvens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/deadlines-och-rapportfrekvens"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/registrerade-forvaltare</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/registrerade-forvaltare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/registrerade-forvaltare"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/vanliga-fel</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/vanliga-fel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/vanliga-fel"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/aifmd-rapportering/xml-filen</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/aifmd-rapportering/xml-filen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/aifmd-rapportering/xml-filen"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/aif</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/aif"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/aif"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/aif-forvaltare</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/aif-forvaltare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/aif-forvaltare"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/aktiebok</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/aktiebok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/aktiebok"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/aktiebrev</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/aktiebrev"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/aktiebrev"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/aktiekapital</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/aktiekapital"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/aktiekapital"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/apport</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/apport"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/apport"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/arsstamma</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/arsstamma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/arsstamma"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/atagande</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/atagande"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/atagande"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/avstamningsbolag</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/avstamningsbolag"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/avstamningsbolag"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/bemyndigande</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/bemyndigande"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/bemyndigande"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/euveca</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/euveca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/euveca"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/fidac</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/fidac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/fidac"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/forbehall</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/forbehall"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/forbehall"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/foretradesratt</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/foretradesratt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/foretradesratt"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/kapitalanrop</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/kapitalanrop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/kapitalanrop"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/koncern</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/koncern"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/koncern"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/kvotvarde</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/kvotvarde"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/kvotvarde"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/nav</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/nav"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/nav"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/nyemission</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/nyemission"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/nyemission"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/per-capsulam</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/per-capsulam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/per-capsulam"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/registrerad</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/registrerad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/registrerad"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/rostlangd</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/rostlangd"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/rostlangd"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/spv</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/spv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/spv"/>
+  </url>
+  <url>
+    <loc>https://www.custora.se/guider/ordlista/teckningslista</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/guider/ordlista/teckningslista"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/guider/ordlista/teckningslista"/>
   </url>
 </urlset>
