@@ -99,11 +99,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/digital-aktiebok"/>
   </url>
   <url>
-    <loc>https://www.custora.se/produkt/kapitalanrop</loc>
+    <loc>https://www.custora.se/produkt/kapitalaktivitet</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalanrop"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-calls"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalanrop"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalaktivitet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-activity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalaktivitet"/>
   </url>
   <url>
     <loc>https://www.custora.se/produkt/koncernstruktur</loc>
@@ -190,11 +190,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/styrelse-och-protokoll"/>
   </url>
   <url>
-    <loc>https://www.custora.se/en/product/capital-calls</loc>
+    <loc>https://www.custora.se/en/product/capital-activity</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalanrop"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-calls"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalanrop"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.custora.se/produkt/kapitalaktivitet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.custora.se/en/product/capital-activity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.custora.se/produkt/kapitalaktivitet"/>
   </url>
   <url>
     <loc>https://www.custora.se/en/product/group-structure</loc>

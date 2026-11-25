@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/produkt/kapitalanrop", "destination": "/produkt/kapitalaktivitet", "permanent": true },
+    { "source": "/en/product/capital-calls", "destination": "/en/product/capital-activity", "permanent": true }
+  ]
 }
