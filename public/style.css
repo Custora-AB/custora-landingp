@@ -319,3 +319,19 @@ form .btn { grid-column: 1 / -1; padding: 15px; font-size: 16px; }
   .hero-media.with-card { padding-bottom: 0; }
   .ov-card { position: relative; left: auto; bottom: auto; width: calc(100% - 24px); margin: -56px auto 0; }
 }
+
+/* home: coming soon cards, solution pair, control and confidence */
+.soon { margin-top: 72px; }
+.soon-h { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.fcard.is-soon { border-style: dashed; border-color: #c9d0dd; }
+.fcard-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+div.role:hover { transform: none; border-color: var(--line); }
+.who.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.assure { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.acol { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.acol > h3 { font-size: 22px; font-weight: 650; margin-bottom: 10px; }
+.alist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.alist li { display: flex; gap: 14px; align-items: flex-start; }
+.alist b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.alist span:not(.ico) { display: block; color: var(--body); font-size: 15.5px; margin-top: 2px; }
+@media (max-width: 860px) { .assure, .who.two { grid-template-columns: minmax(0, 1fr); } }
